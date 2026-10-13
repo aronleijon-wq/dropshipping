@@ -52,7 +52,7 @@
             "p": {
               "type": "text",
               "settings": {
-                "text": "<p>En tålig digitalklocka med inbyggt väckarlarm – perfekt för barn och tonåringar som ska klara morgonen själva. Mobilen kan sova utanför sovrummet.</p>",
+                "text": "<p>En tålig digitalklocka med tyst vibrationslarm – perfekt för barn och tonåringar som ska klara morgonen själva. Mobilen kan sova utanför sovrummet.</p>",
                 "type_preset": "paragraph",
                 "alignment": "left",
                 "text_color": "#4B5262",
@@ -141,7 +141,7 @@
         "t0": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Väckarlarm</strong></p>",
+            "text": "<p><strong>Tyst vibrationslarm</strong></p>",
             "type_preset": "paragraph",
             "alignment": "left",
             "text_color": "#0E1220",
@@ -584,7 +584,7 @@
             "fordelar": {
               "type": "text",
               "settings": {
-                "text": "<ul><li>✔ <strong>Inbyggt väckarlarm</strong> – upp i tid utan mobilen</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
+                "text": "<ul><li>✔ <strong>Tyst vibrationslarm</strong> – väcker bara dig, inte resten av huset</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
                 "type_preset": "rte",
                 "alignment": "left",
                 "text_color": "",
@@ -1004,7 +1004,7 @@
                 "p": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Larmet piper – dagen kan börja.</p>",
+                    "text": "<p>Klockan vibrerar på armen – tyst, utan att väcka någon annan.</p>",
                     "type_preset": "paragraph",
                     "alignment": "center",
                     "text_color": "#4B5262",
@@ -1082,7 +1082,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Du ställer in en tid direkt på klockan – när det är dags piper larmet så att du vaknar.</p>",
+                    "text": "<p>Du ställer in en tid direkt på klockan. När det är dags vibrerar klockan på armen så att du vaknar – helt tyst, utan att väcka någon annan.</p>",
                     "type_preset": "rte",
                     "alignment": "left",
                     "text_color": "",
@@ -1502,7 +1502,7 @@
                 "p": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>✓ Väckarlarm direkt på armen</p><p>✓ Inga appar eller notiser</p><p>✓ Mobilen kan ladda utanför sovrummet</p>",
+                    "text": "<p>✓ Tyst vibrationslarm direkt på armen</p><p>✓ Inga appar eller notiser</p><p>✓ Mobilen kan ladda utanför sovrummet</p>",
                     "type_preset": "paragraph",
                     "alignment": "left",
                     "text_color": "",
@@ -1662,7 +1662,7 @@
                 "v": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Inbyggt</h3>",
+                    "text": "<h3>Vibration, tyst</h3>",
                     "type_preset": "h4",
                     "alignment": "left",
                     "text_color": "",

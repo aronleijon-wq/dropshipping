@@ -16,3 +16,9 @@ förhandsgranskas och publiceras manuellt i admin.
 Med Shopify CLI (kräver nätverksåtkomst till *.myshopify.com):
 
     shopify theme push --store ngzyak-sk.myshopify.com --theme <opublicerat-id>
+
+## Produktfakta (styr all copy)
+
+- Larmet **vibrerar och är tyst** – inget ljud (bekräftat av butiksägaren 2026-10-13).
+- Ingen stegräknare. 3 bar (stänk, regn, handtvätt – inte bad/dusch/simning). Uppladdningsbar. Plast, dolt spänne. 6 färger.
+- Rabatter: 2 st −20 %, 3 st −30 % (automatiska). Inga andra rabatter/jämförpriser.
