@@ -1,0 +1,104 @@
+{% doc %}
+  @prompt
+    Skapa ett halloweeninspirerat informationsblock för produktsidan för ett uppblåsbart LED-spöke. Använd mörk bakgrund #101010, tydliga orange accenter #ff7518 och lättläst ljus text #f5f0e8. Lägg till diskret animerat orange sken, långsamt svävande dekorativa spökinslag och mjuka entréanimationer. Håll produktinformationen och köpknapparna i fokus, undvik blinkningar och respektera reducerad rörelse. Gör text och accentstyrka redigerbara så att butikens befintliga uppgifter om fri frakt, leveranstid och rabatt kan användas utan påhittade värden. Anpassa blocket för mobil med återhållsamma effekter.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-ghost-info-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 28px;
+    border: 1px solid {{ block.settings.accent_color }};
+    border-radius: 16px;
+    color: {{ block.settings.text_color }};
+    background: {{ block.settings.background_color }};
+    box-shadow: 0 0 {{ block.settings.glow_strength }}px {{ block.settings.glow_strength | divided_by: 4.0 }}px {{ block.settings.accent_color | color_modify: 'alpha', 0.20 }};
+  }
+  .ai-ghost-info-{{ ai_gen_id }}::before,
+  .ai-ghost-info-{{ ai_gen_id }}::after {
+    content: '☁';
+    position: absolute;
+    z-index: -1;
+    color: {{ block.settings.accent_color | color_modify: 'alpha', 0.22 }};
+    pointer-events: none;
+    line-height: 1;
+    animation: ai-ghost-float-{{ ai_gen_id }} 8s ease-in-out infinite;
+  }
+  .ai-ghost-info-{{ ai_gen_id }}::before { top: 12px; right: 18px; font-size: 42px; }
+  .ai-ghost-info-{{ ai_gen_id }}::after { bottom: 12px; left: 18px; font-size: 26px; animation-delay: -4s; }
+  .ai-ghost-info-{{ ai_gen_id }}__content { position: relative; z-index: 1; }
+  .ai-ghost-info-{{ ai_gen_id }}__eyebrow {
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: {{ block.settings.background_color }};
+    background: {{ block.settings.accent_color }};
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .ai-ghost-info-{{ ai_gen_id }}__title { margin: 0 0 10px; color: {{ block.settings.text_color }}; font-size: clamp(22px, 4vw, 32px); line-height: 1.15; }
+  .ai-ghost-info-{{ ai_gen_id }}__copy { margin: 0 0 18px; color: {{ block.settings.text_color }}; font-size: 16px; line-height: 1.6; }
+  .ai-ghost-info-{{ ai_gen_id }}__details { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .ai-ghost-info-{{ ai_gen_id }}__detail { border: 1px solid {{ block.settings.accent_color | color_modify: 'alpha', 0.7 }}; border-radius: 999px; padding: 8px 12px; color: {{ block.settings.text_color }}; font-size: 14px; line-height: 1.35; }
+  .ai-ghost-info-{{ ai_gen_id }}__detail strong { color: {{ block.settings.accent_color }}; }
+  @keyframes ai-ghost-float-{{ ai_gen_id }} { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @media (max-width: 749px) {
+    .ai-ghost-info-{{ ai_gen_id }} { padding: 20px; box-shadow: 0 0 {{ block.settings.glow_strength | divided_by: 2 }}px {{ block.settings.accent_color | color_modify: 'alpha', 0.14 }}; }
+    .ai-ghost-info-{{ ai_gen_id }}::before { font-size: 30px; }
+    .ai-ghost-info-{{ ai_gen_id }}::after { font-size: 20px; }
+    .ai-ghost-info-{{ ai_gen_id }}__details { gap: 6px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .ai-ghost-info-{{ ai_gen_id }} { animation: ai-ghost-enter-{{ ai_gen_id }} .55s ease-out both; }
+    @keyframes ai-ghost-enter-{{ ai_gen_id }} { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ai-ghost-info-{{ ai_gen_id }}, .ai-ghost-info-{{ ai_gen_id }}::before, .ai-ghost-info-{{ ai_gen_id }}::after { animation: none; }
+  }
+{% endstyle %}
+
+<div class="ai-ghost-info-{{ ai_gen_id }}" style="width: {{ block.settings.desktop_width_percent }}%;" {{ block.shopify_attributes }}>
+  <div class="ai-ghost-info-{{ ai_gen_id }}__content">
+    {% if block.settings.eyebrow != blank %}<p class="ai-ghost-info-{{ ai_gen_id }}__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+    {% if block.settings.heading != blank %}<h2 class="ai-ghost-info-{{ ai_gen_id }}__title">{{ block.settings.heading | escape }}</h2>{% endif %}
+    {% if block.settings.description != blank %}<div class="ai-ghost-info-{{ ai_gen_id }}__copy">{{ block.settings.description }}</div>{% endif %}
+    <ul class="ai-ghost-info-{{ ai_gen_id }}__details" aria-label="Produktinformation">
+      {% if block.settings.shipping_info != blank %}<li class="ai-ghost-info-{{ ai_gen_id }}__detail"><strong>Frakt:</strong> {{ block.settings.shipping_info | escape }}</li>{% endif %}
+      {% if block.settings.delivery_info != blank %}<li class="ai-ghost-info-{{ ai_gen_id }}__detail"><strong>Leverans:</strong> {{ block.settings.delivery_info | escape }}</li>{% endif %}
+      {% if block.settings.discount_info != blank %}<li class="ai-ghost-info-{{ ai_gen_id }}__detail"><strong>Erbjudande:</strong> {{ block.settings.discount_info | escape }}</li>{% endif %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Halloween produktinfo",
+  "settings": [
+    { "type": "header", "content": "Produktinformation" },
+    { "type": "text", "id": "eyebrow", "label": "Överrad", "default": "Spöklikt bra belysning" },
+    { "type": "text", "id": "heading", "label": "Rubrik", "default": "Ett lysande spöke för Halloween" },
+    { "type": "richtext", "id": "description", "label": "Beskrivning", "default": "<p>Skapa en stämningsfull entré med ett uppblåsbart LED-spöke som syns när mörkret faller.</p>" },
+    { "type": "text", "id": "shipping_info", "label": "Fraktuppgift" },
+    { "type": "text", "id": "delivery_info", "label": "Leveranstid" },
+    { "type": "text", "id": "discount_info", "label": "Rabatt eller erbjudande" },
+    { "type": "header", "content": "Utseende" },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "color", "id": "background_color", "label": "Bakgrund", "default": "#101010" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#ff7518" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#f5f0e8" },
+    { "type": "range", "id": "glow_strength", "label": "Styrka på sken", "min": 0, "max": 20, "step": 2, "unit": "px", "default": 8 }
+  ],
+  "presets": [{ "name": "Halloween produktinfo" }],
+  "tag": null,
+  "class": "halloween-product-info"
+}
+{% endschema %}

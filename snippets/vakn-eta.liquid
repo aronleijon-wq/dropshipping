@@ -1,0 +1,11 @@
+<div style="border:1px solid rgba(255,181,71,.45);background:rgba(255,181,71,.07);border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.6">
+<div>🚚 Beräknad leverans: <strong class="vk-eta">7–12 arbetsdagar</strong></div>
+<div>📦 Fri frakt med spårning · 30 dagars öppet köp</div>
+</div>
+<script>
+(function(){if(window.__vk)return;window.__vk=1;
+function addBiz(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);var w=d.getDay();if(w>0&&w<6)n--;}return d;}
+function f(d){return d.toLocaleDateString('sv-SE',{weekday:'short',day:'numeric',month:'short'});}
+function run(){var n=new Date();document.querySelectorAll('.vk-eta').forEach(function(e){e.textContent=f(addBiz(n,7))+' – '+f(addBiz(n,12));});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();
+</script>

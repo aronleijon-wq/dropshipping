@@ -1,0 +1,1283 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "section",
+      "blocks": {
+        "txt": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 18,
+            "width": "fill"
+          },
+          "blocks": {
+            "eyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>⏰ SPORTKLOCKA MED VÄCKARLARM</strong></p>",
+                "type_preset": "paragraph",
+                "alignment": "left",
+                "text_color": "#FFB547",
+                "width": "fit-content",
+                "max_width": "normal"
+              },
+              "blocks": {}
+            },
+            "h1": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>Upp i tid. Utan mobilen.</h1>",
+                "type_preset": "h1",
+                "alignment": "left",
+                "text_color": "#EEF0F7",
+                "width": "100%",
+                "max_width": "normal"
+              },
+              "blocks": {}
+            },
+            "p": {
+              "type": "text",
+              "settings": {
+                "text": "<p>En tålig digitalklocka med inbyggt väckarlarm – perfekt för barn och tonåringar som ska klara morgonen själva. Mobilen kan sova utanför sovrummet.</p>",
+                "type_preset": "paragraph",
+                "alignment": "left",
+                "text_color": "#AEB4C8",
+                "width": "100%",
+                "max_width": "narrow"
+              },
+              "blocks": {}
+            },
+            "b": {
+              "type": "button",
+              "settings": {
+                "label": "Köp nu – 249 kr",
+                "link": "shopify://products/vakn-sportklocka-med-vackarlarm",
+                "style_class": "button",
+                "width": "fit-content",
+                "width_mobile": "fit-content"
+              },
+              "blocks": {}
+            },
+            "small": {
+              "type": "text",
+              "settings": {
+                "text": "<p>🚚 Fri frakt · 30 dagars öppet köp</p>",
+                "type_preset": "paragraph",
+                "alignment": "left",
+                "text_color": "#AEB4C8",
+                "width": "fit-content",
+                "max_width": "normal"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "h1",
+            "p",
+            "b",
+            "small"
+          ]
+        },
+        "img": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sf4fa75f5dfa34ba38ccf29bbbed3be73N.webp",
+            "link": "shopify://products/vakn-sportklocka-med-vackarlarm",
+            "image_ratio": "square",
+            "width": "fill",
+            "height": "fit",
+            "border": "none",
+            "border_radius": 24
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "txt",
+        "img"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "section_width": "page-width",
+        "background_media": "none",
+        "background_color": "#0E1220",
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "trust": {
+      "type": "marquee",
+      "blocks": {
+        "i0": {
+          "type": "icon",
+          "settings": {
+            "icon": "stopwatch",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t0": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Väckarlarm</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "i1": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_box",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tydlig digital display</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "i2": {
+          "type": "icon",
+          "settings": {
+            "icon": "washing",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tål regn – 3 bar</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "i3": {
+          "type": "icon",
+          "settings": {
+            "icon": "lightning_bolt",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Uppladdningsbar</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "i4": {
+          "type": "icon",
+          "settings": {
+            "icon": "truck",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Fri frakt</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "i0",
+        "t0",
+        "i1",
+        "t1",
+        "i2",
+        "t2",
+        "i3",
+        "t3",
+        "i4",
+        "t4"
+      ],
+      "settings": {
+        "movement_direction": "reverse",
+        "background_color": "#FFB547",
+        "padding-block-start": 12,
+        "padding-block-end": 12,
+        "gap_between_elements": 14
+      }
+    },
+    "who": {
+      "type": "section",
+      "blocks": {
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Därför VAKN</h2>",
+            "type_preset": "h2",
+            "alignment": "center",
+            "text_color": "#EEF0F7",
+            "width": "100%",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "rad": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "c1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "background_color": "#161B2E",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#262D47",
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "e": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>📵</h3>",
+                    "type_preset": "h2",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Mobilfritt sovrum</h3>",
+                    "type_preset": "h4",
+                    "alignment": "left",
+                    "text_color": "#EEF0F7",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Barnen behöver inte mobilen som väckarklocka. Låt den ladda i köket.</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "left",
+                    "text_color": "#AEB4C8",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "e",
+                "h",
+                "p"
+              ]
+            },
+            "c2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "background_color": "#161B2E",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#262D47",
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "e": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>🎒</h3>",
+                    "type_preset": "h2",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Egen koll på tiden</h3>",
+                    "type_preset": "h4",
+                    "alignment": "left",
+                    "text_color": "#EEF0F7",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Tydliga siffror – i skolan, på träningen och på väg hem.</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "left",
+                    "text_color": "#AEB4C8",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "e",
+                "h",
+                "p"
+              ]
+            },
+            "c3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "background_color": "#161B2E",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#262D47",
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "e": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>⚽</h3>",
+                    "type_preset": "h2",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Tål vardagen</h3>",
+                    "type_preset": "h4",
+                    "alignment": "left",
+                    "text_color": "#EEF0F7",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Lätt boett och dolt spänne som sitter kvar vid lek och idrott.</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "left",
+                    "text_color": "#AEB4C8",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "e",
+                "h",
+                "p"
+              ]
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "block_order": [
+        "h",
+        "rad"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "background_media": "none",
+        "background_color": "#0E1220",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "produkt": {
+      "type": "featured-product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_featured-product-information-carousel",
+          "static": true,
+          "settings": {
+            "aspect_ratio": "adapt",
+            "media_fit": "contain",
+            "media_radius": 16,
+            "zoom": true,
+            "hide_variants": false
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "gap": 18,
+            "details_position": "flex-start",
+            "padding-block-start": 24,
+            "padding-block-end": 24
+          },
+          "blocks": {
+            "header": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fill"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<div style=\"display:inline-block;background:#FFB547;color:#0E1220;font-weight:800;letter-spacing:.04em;padding:6px 14px;border-radius:999px;font-size:13px\">⏰ VÄCKARLARM</div>"
+                  },
+                  "blocks": {}
+                },
+                "title": {
+                  "type": "product-title",
+                  "settings": {
+                    "type_preset": "h2",
+                    "alignment": "left",
+                    "width": "fit-content"
+                  },
+                  "blocks": {}
+                },
+                "price": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "h3",
+                    "width": "100%",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "badge",
+                "title",
+                "price"
+              ]
+            },
+            "fordelar": {
+              "type": "text",
+              "settings": {
+                "text": "<ul><li>✔ <strong>Inbyggt väckarlarm</strong> – upp i tid utan mobilen</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
+                "type_preset": "rte",
+                "alignment": "left",
+                "text_color": "",
+                "width": "100%",
+                "max_width": "normal"
+              },
+              "blocks": {}
+            },
+            "eta": {
+              "type": "custom-liquid",
+              "settings": {
+                "custom_liquid": "<div style=\"border:1px solid rgba(255,181,71,.45);background:rgba(255,181,71,.07);border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.6\">\n<div>🚚 Beräknad leverans: <strong class=\"vk-eta\">7–12 arbetsdagar</strong></div>\n<div>📦 Fri frakt med spårning · 30 dagars öppet köp</div>\n</div>\n<script>\n(function(){if(window.__vk)return;window.__vk=1;\nfunction addBiz(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);var w=d.getDay();if(w>0&&w<6)n--;}return d;}\nfunction f(d){return d.toLocaleDateString('sv-SE',{weekday:'short',day:'numeric',month:'short'});}\nfunction run(){var n=new Date();document.querySelectorAll('.vk-eta').forEach(function(e){e.textContent=f(addBiz(n,7))+' – '+f(addBiz(n,12));});}\nif(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();\n</script>"
+              },
+              "blocks": {}
+            },
+            "variant_picker": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "buy_buttons": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "trust": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "space-between",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill"
+              },
+              "blocks": {
+                "t1": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "i": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "truck",
+                        "width": 22,
+                        "icon_color": "#FFB547"
+                      },
+                      "blocks": {}
+                    },
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Fri frakt</p>",
+                        "type_preset": "paragraph",
+                        "alignment": "left",
+                        "text_color": "",
+                        "width": "fit-content",
+                        "max_width": "normal"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "i",
+                    "t"
+                  ]
+                },
+                "t2": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "i": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "return",
+                        "width": 22,
+                        "icon_color": "#FFB547"
+                      },
+                      "blocks": {}
+                    },
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>30 dagars öppet köp</p>",
+                        "type_preset": "paragraph",
+                        "alignment": "left",
+                        "text_color": "",
+                        "width": "fit-content",
+                        "max_width": "normal"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "i",
+                    "t"
+                  ]
+                },
+                "t3": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "i": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "lock",
+                        "width": 22,
+                        "icon_color": "#FFB547"
+                      },
+                      "blocks": {}
+                    },
+                    "t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Säker betalning</p>",
+                        "type_preset": "paragraph",
+                        "alignment": "left",
+                        "text_color": "",
+                        "width": "fit-content",
+                        "max_width": "normal"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "i",
+                    "t"
+                  ]
+                }
+              },
+              "block_order": [
+                "t1",
+                "t2",
+                "t3"
+              ]
+            },
+            "betal": {
+              "type": "payment-icons",
+              "settings": {
+                "horizontal_alignment": "flex-start",
+                "gap": 10
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "header",
+            "fordelar",
+            "eta",
+            "variant_picker",
+            "buy_buttons",
+            "trust",
+            "betal"
+          ]
+        }
+      },
+      "settings": {
+        "product": "vakn-sportklocka-med-vackarlarm",
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": true,
+        "gap": 48,
+        "background_color": "#0E1220",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "steg": {
+      "type": "section",
+      "blocks": {
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Så funkar det</h2>",
+            "type_preset": "h2",
+            "alignment": "center",
+            "text_color": "#EEF0F7",
+            "width": "100%",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "rad": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "s1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "n": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>1</h3>",
+                    "type_preset": "h1",
+                    "alignment": "center",
+                    "text_color": "#FFB547",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Ställ in larmet</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center",
+                    "text_color": "#EEF0F7",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Välj vilken tid klockan ska ringa.</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "center",
+                    "text_color": "#AEB4C8",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "n",
+                "h",
+                "p"
+              ]
+            },
+            "s2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "n": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>2</h3>",
+                    "type_preset": "h1",
+                    "alignment": "center",
+                    "text_color": "#FFB547",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Mobilen sover ute</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center",
+                    "text_color": "#EEF0F7",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ingen skärm att fastna i vid läggdags.</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "center",
+                    "text_color": "#AEB4C8",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "n",
+                "h",
+                "p"
+              ]
+            },
+            "s3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "n": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>3</h3>",
+                    "type_preset": "h1",
+                    "alignment": "center",
+                    "text_color": "#FFB547",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "h": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Upp i tid</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center",
+                    "text_color": "#EEF0F7",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Larmet piper – dagen kan börja.</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "center",
+                    "text_color": "#AEB4C8",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "n",
+                "h",
+                "p"
+              ]
+            }
+          },
+          "block_order": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        }
+      },
+      "block_order": [
+        "h",
+        "rad"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "background_media": "none",
+        "background_color": "#161B2E",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "faq": {
+      "type": "section",
+      "blocks": {
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Vanliga frågor</h2>",
+            "type_preset": "h2",
+            "alignment": "center",
+            "text_color": "#EEF0F7",
+            "width": "100%",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "acc": {
+          "type": "accordion",
+          "settings": {
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6",
+            "text_color": "#EEF0F7"
+          },
+          "blocks": {
+            "q1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Hur fungerar väckarlarmet?",
+                "open_by_default": true,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Du ställer in en tid direkt på klockan – när det är dags piper larmet så att du vaknar.</p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
+            },
+            "q2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Tål den vatten?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Den är klassad för 3 bar och tål stänk, regn och handtvätt. Ta av den vid bad, dusch och simning.</p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
+            },
+            "q3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Behöver den batteribyte?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Nej, batteriet är uppladdningsbart och ingår.</p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
+            },
+            "q4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Hur lång är leveranstiden?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Normalt 7–12 arbetsdagar. Du får spårningsnummer via mejl när paketet skickas.</p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
+            },
+            "q5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Kan jag returnera den?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ja, du har 30 dagars öppet köp.</p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
+            }
+          },
+          "block_order": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5"
+          ]
+        }
+      },
+      "block_order": [
+        "h",
+        "acc"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "background_media": "none",
+        "background_color": "#161B2E",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "cta": {
+      "type": "section",
+      "blocks": {
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Ge dem koll på morgonen.</h2>",
+            "type_preset": "h2",
+            "alignment": "center",
+            "text_color": "#EEF0F7",
+            "width": "100%",
+            "max_width": "narrow"
+          },
+          "blocks": {}
+        },
+        "p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>249 kr · Fri frakt · 30 dagars öppet köp</p>",
+            "type_preset": "paragraph",
+            "alignment": "center",
+            "text_color": "#AEB4C8",
+            "width": "100%",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "b": {
+          "type": "button",
+          "settings": {
+            "label": "Köp VAKN →",
+            "link": "shopify://products/vakn-sportklocka-med-vackarlarm",
+            "style_class": "button",
+            "width": "fit-content",
+            "width_mobile": "fit-content"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "h",
+        "p",
+        "b"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "background_media": "none",
+        "background_color": "#0E1220",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "trust",
+    "who",
+    "produkt",
+    "steg",
+    "faq",
+    "cta"
+  ]
+}
