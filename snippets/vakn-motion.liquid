@@ -46,6 +46,16 @@
     --vk-accent: var(--color-primary-button-background);
     --vk-on-accent: var(--color-primary-button-text);
     --vk-ease: var(--ease-out-cubic);
+    --vk-star: #f5b301;
+  }
+
+  /* Judge.me (app embed): guldiga stjärnor i omdömen, betyg och badges.
+     !important behövs eftersom Judge.me sätter färgen i sin egen CSS. */
+  .jdgm-star,
+  .jdgm-star.jdgm--on,
+  .jdgm-star.jdgm--half,
+  .jdgm-star.jdgm--off {
+    color: var(--vk-star) !important;
   }
 
   /* Hero: diagonalt accentfält bakom produktbilden (desktop) */
