@@ -48,11 +48,23 @@
               "type": "payment-icons",
               "settings": {},
               "blocks": {}
+            },
+            "kontakt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Karl Gerhards väg 9, 133 35 Saltsjöbaden<br><a href=\"mailto:aronleijon@icloud.com\">aronleijon@icloud.com</a></p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "left",
+                "text_color": "#AEB4C8"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "logo",
             "pitch",
+            "kontakt",
             "pay"
           ]
         },
@@ -78,21 +90,19 @@
               },
               "blocks": {}
             },
-            "lankar": {
-              "type": "text",
+            "meny": {
+              "type": "menu",
               "settings": {
-                "text": "<p><a href=\"/pages/contact\">Kontakta oss</a></p><p><a href=\"/policies/privacy-policy\">Integritetspolicy</a></p>",
-                "type_preset": "rte",
-                "width": "100%",
-                "alignment": "left",
-                "text_color": "#AEB4C8"
+                "menu": "footer",
+                "heading": "",
+                "link_preset": "paragraph"
               },
               "blocks": {}
             }
           },
           "block_order": [
             "rubrik",
-            "lankar"
+            "meny"
           ]
         },
         "vk_trygg": {

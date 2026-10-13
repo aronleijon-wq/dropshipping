@@ -661,7 +661,7 @@
                     "t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Fri frakt inom Sverige. Leverans inom 7–12 arbetsdagar med spårningsnummer via mejl.</p>",
+                        "text": "<p>Fri frakt inom Sverige. Leverans inom 7–12 arbetsdagar med spårningsnummer via mejl.</p><p><a href=\"/pages/frakt\">Läs mer om frakt och leverans</a></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -700,7 +700,7 @@
                     "t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>30 dagars öppet köp. Inte nöjd? Kontakta oss så ordnar vi returen.</p>",
+                        "text": "<p>30 dagars öppet köp. Inte nöjd? Kontakta oss så ordnar vi returen.</p><p><a href=\"/pages/retur\">Läs mer om retur och öppet köp</a></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",

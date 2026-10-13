@@ -1157,7 +1157,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Normalt 7–12 arbetsdagar. Du får spårningsnummer via mejl när paketet skickas.</p>",
+                    "text": "<p>Normalt 7–12 arbetsdagar. Du får spårningsnummer via mejl när paketet skickas.</p><p><a href=\"/pages/frakt\">Läs mer om frakt och leverans</a></p>",
                     "type_preset": "rte",
                     "alignment": "left",
                     "text_color": "",
@@ -1182,7 +1182,32 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Ja, du har 30 dagars öppet köp.</p>",
+                    "text": "<p>Ja, du har 30 dagars öppet köp.</p><p><a href=\"/pages/retur\">Läs mer om retur och öppet köp</a></p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
+            },
+            "q6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Hur kontaktar jag er?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Mejla oss på <a href=\"mailto:aronleijon@icloud.com\">aronleijon@icloud.com</a> eller använd <a href=\"/pages/contact\">kontaktformuläret</a>. Ange gärna ordernummer om det gäller en beställning.</p>",
                     "type_preset": "rte",
                     "alignment": "left",
                     "text_color": "",
@@ -1202,7 +1227,8 @@
             "q2",
             "q3",
             "q4",
-            "q5"
+            "q5",
+            "q6"
           ]
         }
       },
