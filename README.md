@@ -1,8 +1,9 @@
 # VAKN – Shopify-tema (Horizon)
 
 Temat i repot motsvarar:
-- "VAKN – utveckling" (id 209642062154) – LIVE sedan 2026-10-13
-- "VAKN – utkast" (id 209651466570) – opublicerad kopia där nya ändringar laddas upp
+- Live och utkast växlar: det tema som är opublicerat får nya ändringar och publiceras sedan.
+- "VAKN – utkast" (id 209651466570) och "VAKN – utveckling" (id 209642062154).
+  Kontrollera med Admin API (themes { role }) vilket som är MAIN innan uppladdning.
 
 VAKN-specifikt:
 - `templates/index.json` – startsida
@@ -12,7 +13,7 @@ VAKN-specifikt:
 - `sections/header-group.json` – annonsbanner
 - `config/settings_data.json` – färger/typsnitt
 
-Live-temat kan inte skrivas via API. Ändringar laddas upp till "VAKN – utkast",
+Live-temat kan inte skrivas via API. Ändringar laddas upp till det opublicerade temat,
 förhandsgranskas och publiceras manuellt i admin. Efter publicering: duplicera live-temat
 till ett nytt utkast innan nästa ändring.
 
