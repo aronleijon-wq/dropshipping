@@ -66,6 +66,8 @@
     transform: skewX(-24deg);
   }
   #MainContent .section-content-wrapper > .text-block--align-center h2::after { margin-inline: auto; }
+  /* På accentfärgad bakgrund (CTA) blir strecket i textfärgen */
+  [id$='__cta'] .section-content-wrapper > .text-block h2::after { background: var(--color-foreground); }
 
   /* Därför VAKN: emoji i rund accentbricka */
   [id$='__who'] .group-block .group-block .text-block:first-child h3 {
@@ -133,10 +135,10 @@
       }
     }
 
-    /* Mörkt avslut (CTA): mjukt rörligt ljus i bakgrunden */
+    /* Avslut (CTA): mjukt rörligt ljus i bakgrunden */
     [id$='__cta'] .section-background {
-      background-image: radial-gradient(38% 55% at 78% 40%, color-mix(in srgb, var(--vk-accent) 18%, transparent), transparent 70%),
-        radial-gradient(34% 50% at 12% 85%, rgb(98 120 255 / var(--opacity-15)), transparent 70%);
+      background-image: radial-gradient(38% 55% at 78% 40%, rgb(255 255 255 / var(--opacity-40)), transparent 70%),
+        radial-gradient(34% 50% at 12% 85%, rgb(255 255 255 / var(--opacity-25)), transparent 70%);
       background-size: 140% 140%;
       animation: vk-drift 18s ease-in-out infinite alternate;
     }

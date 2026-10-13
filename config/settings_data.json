@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/vakn_logga_ljus.png",
+    "logo": "shopify://shop_images/vakn_logga_mork.png",
     "logo_height": 40,
     "logo_height_mobile": 34,
     "favicon": "shopify://shop_images/vakn_ikon_1.png",
@@ -135,6 +135,7 @@
       "color11": "{{ settings.color_palette.color3 }}"
     },
     "type_case_h4": "uppercase",
-    "button_text_case_secondary": "uppercase"
+    "button_text_case_secondary": "uppercase",
+    "logo_inverse": "shopify://shop_images/vakn_logga_ljus.png"
   }
 }
