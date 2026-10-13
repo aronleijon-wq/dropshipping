@@ -596,7 +596,7 @@
             "eta": {
               "type": "custom-liquid",
               "settings": {
-                "custom_liquid": "<div style=\"border:1px solid rgba(255,181,71,.45);background:rgba(255,181,71,.07);border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.6\">\n<div>🚚 Beräknad leverans: <strong class=\"vk-eta\">7–12 arbetsdagar</strong></div>\n<div>📦 Fri frakt med spårning · 30 dagars öppet köp</div>\n</div>\n<script>\n(function(){if(window.__vk)return;window.__vk=1;\nfunction addBiz(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);var w=d.getDay();if(w>0&&w<6)n--;}return d;}\nfunction f(d){return d.toLocaleDateString('sv-SE',{weekday:'short',day:'numeric',month:'short'});}\nfunction run(){var n=new Date();document.querySelectorAll('.vk-eta').forEach(function(e){e.textContent=f(addBiz(n,7))+' – '+f(addBiz(n,12));});}\nif(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();\n</script>"
+                "custom_liquid": "{% render 'vakn-eta' %}"
               },
               "blocks": {}
             },
@@ -786,14 +786,22 @@
                 "gap": 10
               },
               "blocks": {}
+            },
+            "bundle": {
+              "type": "custom-liquid",
+              "settings": {
+                "custom_liquid": "{% render 'vakn-bundle', product: closest.product %}"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "header",
             "fordelar",
-            "eta",
             "variant_picker",
+            "bundle",
             "buy_buttons",
+            "eta",
             "trust",
             "betal"
           ]

@@ -8,18 +8,18 @@
 {%- assign s3 = p | times: 3 | minus: t3 -%}
 <div class="vk-bundle">
   <div class="vk-b-title">Köp fler – spara mer</div>
-  <button type="button" class="vk-tier is-on" data-qty="1">
+  <button type="button" class="vk-tier is-on" data-qty="1" aria-pressed="true">
     <span class="vk-r"></span>
     <span class="vk-l"><strong>1 st</strong><small>Ordinarie pris</small></span>
     <span class="vk-p"><strong>{{ p | money_without_trailing_zeros }}</strong></span>
   </button>
-  <button type="button" class="vk-tier" data-qty="2">
+  <button type="button" class="vk-tier" data-qty="2" aria-pressed="false">
     <span class="vk-tag">POPULÄRAST</span>
     <span class="vk-r"></span>
     <span class="vk-l"><strong>2 st</strong><small>{{ u2 | money_without_trailing_zeros }}/st · spara {{ s2 | money_without_trailing_zeros }}</small></span>
     <span class="vk-p"><strong>{{ t2 | money_without_trailing_zeros }}</strong><s>{{ p | times: 2 | money_without_trailing_zeros }}</s></span>
   </button>
-  <button type="button" class="vk-tier" data-qty="3">
+  <button type="button" class="vk-tier" data-qty="3" aria-pressed="false">
     <span class="vk-tag vk-tag2">BÄST PRIS</span>
     <span class="vk-r"></span>
     <span class="vk-l"><strong>3 st</strong><small>{{ u3 | money_without_trailing_zeros }}/st · spara {{ s3 | money_without_trailing_zeros }}</small></span>
@@ -46,16 +46,36 @@
 <script>
 (function(){
   if(window.__vkB)return;window.__vkB=1;
+  function scopeOf(el){return el.closest('.shopify-section')||document;}
+  function mark(box,q){
+    box.querySelectorAll('.vk-tier').forEach(function(x){
+      var on=x.getAttribute('data-qty')===String(q);
+      x.classList.toggle('is-on',on);x.setAttribute('aria-pressed',on?'true':'false');
+    });
+  }
   function setQty(scope,q){
-    var inp=scope.querySelector('input[name="quantity"]')||document.querySelector('input[name="quantity"]');
-    if(!inp)return; inp.value=q;
-    inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));
+    var comp=scope.querySelector('quantity-selector-component');
+    var inp=(comp||scope).querySelector('input[name="quantity"]');
+    if(!inp)return;
+    inp.value=q;
+    if(comp&&typeof comp.onQuantityChange==='function'){
+      /* Horizon: uppdatera +/- knappar och meddela sticky-knappen */
+      comp.updateButtonStates();comp.onQuantityChange();
+    }else{
+      inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));
+    }
   }
   document.addEventListener('click',function(e){
-    var b=e.target.closest('.vk-tier'); if(!b)return;
-    var box=b.closest('.vk-bundle'); box.querySelectorAll('.vk-tier').forEach(function(x){x.classList.remove('is-on')});
-    b.classList.add('is-on');
-    setQty(b.closest('.shopify-section')||document,b.getAttribute('data-qty'));
+    var b=e.target.closest('.vk-tier');if(!b)return;
+    var q=b.getAttribute('data-qty');
+    mark(b.closest('.vk-bundle'),q);
+    setQty(scopeOf(b),q);
+  });
+  /* Antal ändrat med +/- eller manuellt: markera matchande ruta (ingen vid 4+) */
+  document.addEventListener('quantity-selector:update',function(e){
+    var t=e.target;if(!t.closest||t.closest('cart-items-component'))return;
+    var box=scopeOf(t).querySelector('.vk-bundle');
+    if(box&&e.detail)mark(box,e.detail.quantity);
   });
 })();
 </script>
