@@ -9,10 +9,10 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/vakn_logga_mork.png",
+    "logo": "shopify://shop_images/sleepwell_logga_mork.png",
     "logo_height": 40,
     "logo_height_mobile": 34,
-    "favicon": "shopify://shop_images/vakn_ikon_1.png",
+    "favicon": "shopify://shop_images/sleepwell_ikon.png",
     "page_text_color": "#0E1220",
     "type_body_font": "inter_n4",
     "type_subheading_font": "inter_n6",
@@ -136,6 +136,6 @@
     },
     "type_case_h4": "uppercase",
     "button_text_case_secondary": "uppercase",
-    "logo_inverse": "shopify://shop_images/vakn_logga_ljus.png"
+    "logo_inverse": "shopify://shop_images/sleepwell_logga_ljus.png"
   }
 }

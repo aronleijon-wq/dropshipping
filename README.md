@@ -1,4 +1,4 @@
-# VAKN – Shopify-tema (Horizon)
+# SleepWell (tidigare VAKN) – Shopify-tema (Horizon)
 
 Temat i repot motsvarar:
 - Live och utkast växlar: det tema som är opublicerat får nya ändringar och publiceras sedan.

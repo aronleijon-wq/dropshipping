@@ -307,7 +307,7 @@
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Därför VAKN</h2>",
+            "text": "<h2>Därför SleepWell</h2>",
             "type_preset": "h2",
             "alignment": "center",
             "text_color": "",
@@ -1353,7 +1353,7 @@
         "b": {
           "type": "button",
           "settings": {
-            "label": "Köp VAKN →",
+            "label": "Köp SleepWell →",
             "link": "shopify://products/vakn-sportklocka-med-vackarlarm",
             "style_class": "button-secondary",
             "width": "fit-content",
@@ -1412,7 +1412,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>Folkhälsomyndigheten rekommenderar att barn och unga inte använder skärmar innan det är dags att sova, och att skärmarna lämnas utanför sovrummet under natten. Det är svårt när mobilen också är väckarklockan. Med VAKN på armen kan mobilen ladda i köket – larmet väcker ändå.</p>",
+            "text": "<p>Folkhälsomyndigheten rekommenderar att barn och unga inte använder skärmar innan det är dags att sova, och att skärmarna lämnas utanför sovrummet under natten. Det är svårt när mobilen också är väckarklockan. Med SleepWell på armen kan mobilen ladda i köket – larmet väcker ändå.</p>",
             "type_preset": "paragraph",
             "alignment": "center",
             "text_color": "#4B5262",
@@ -1562,7 +1562,7 @@
                 "h": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>VAKN på armen</h3>",
+                    "text": "<h3>SleepWell på armen</h3>",
                     "type_preset": "h4",
                     "alignment": "left",
                     "text_color": "",
