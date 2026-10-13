@@ -1,5 +1,7 @@
 # SleepWell (tidigare VAKN) – Shopify-tema (Horizon)
 
+Domän: https://sleep-well.se (primär, DNS hos Simply.com). Live-tema: "SleepWell".
+
 Temat i repot motsvarar:
 - Live och utkast växlar: det tema som är opublicerat får nya ändringar och publiceras sedan.
 - "VAKN – utkast" (id 209651466570) och "VAKN – utveckling" (id 209642062154).
