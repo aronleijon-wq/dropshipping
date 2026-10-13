@@ -1,6 +1,8 @@
 # VAKN – Shopify-tema (Horizon)
 
-Hela live-temat "VAKN – mängdrabatt" (id 209490968906), hämtat via Admin API.
+Temat i repot motsvarar:
+- "VAKN – utveckling" (id 209642062154) – LIVE sedan 2026-10-13
+- "VAKN – utkast" (id 209651466570) – opublicerad kopia där nya ändringar laddas upp
 
 VAKN-specifikt:
 - `templates/index.json` – startsida
@@ -10,8 +12,9 @@ VAKN-specifikt:
 - `sections/header-group.json` – annonsbanner
 - `config/settings_data.json` – färger/typsnitt
 
-Live-temat kan inte skrivas via API. Ändringar pushas till ett opublicerat tema,
-förhandsgranskas och publiceras manuellt i admin.
+Live-temat kan inte skrivas via API. Ändringar laddas upp till "VAKN – utkast",
+förhandsgranskas och publiceras manuellt i admin. Efter publicering: duplicera live-temat
+till ett nytt utkast innan nästa ändring.
 
 Med Shopify CLI (kräver nätverksåtkomst till *.myshopify.com):
 
