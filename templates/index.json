@@ -52,7 +52,7 @@
             "p": {
               "type": "text",
               "settings": {
-                "text": "<p>En tålig digitalklocka med tyst vibrationslarm – perfekt för barn och tonåringar som ska klara morgonen själva. Mobilen kan sova utanför sovrummet.</p>",
+                "text": "<p>En tålig digitalklocka med tyst vibrationslarm, stegräknare och sömnmätning – perfekt för barn och tonåringar som ska klara morgonen själva. Mobilen kan sova utanför sovrummet.</p>",
                 "type_preset": "paragraph",
                 "alignment": "left",
                 "text_color": "#4B5262",
@@ -233,11 +233,57 @@
             "max_width": "normal"
           },
           "blocks": {}
+        },
+        "i5": {
+          "type": "icon",
+          "settings": {
+            "icon": "shoe",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t5": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Steg, km &amp; kalorier</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
+        },
+        "i6": {
+          "type": "icon",
+          "settings": {
+            "icon": "stopwatch",
+            "width": 20,
+            "icon_color": "#0E1220"
+          },
+          "blocks": {}
+        },
+        "t6": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Sömnmätning &amp; stoppur</strong></p>",
+            "type_preset": "paragraph",
+            "alignment": "left",
+            "text_color": "#0E1220",
+            "width": "fit-content",
+            "max_width": "normal"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "i0",
         "t0",
+        "i5",
+        "t5",
+        "i6",
+        "t6",
         "i1",
         "t1",
         "i2",
@@ -584,7 +630,7 @@
             "fordelar": {
               "type": "text",
               "settings": {
-                "text": "<ul><li>✔ <strong>Tyst vibrationslarm</strong> – väcker bara dig, inte resten av huset</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
+                "text": "<ul><li>✔ <strong>Tyst vibrationslarm</strong> – väcker bara dig, inte resten av huset</li><li>✔ <strong>Steg, km och kalorier</strong> – plus sömnmätning och stoppur</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
                 "type_preset": "rte",
                 "alignment": "left",
                 "text_color": "",
@@ -1220,10 +1266,36 @@
               "block_order": [
                 "t"
               ]
+            },
+            "q7": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Räknar den steg och kalorier?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ja. Klockan räknar steg, distans (km) och kalorier, mäter sömnen och har stoppur. Träningsdatan sparas i klockan. Värdena är ungefärliga och inte avsedda för medicinskt bruk.</p>",
+                    "type_preset": "rte",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "t"
+              ]
             }
           },
           "block_order": [
             "q1",
+            "q7",
             "q2",
             "q3",
             "q4",
@@ -1502,7 +1574,7 @@
                 "p": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>✓ Tyst vibrationslarm direkt på armen</p><p>✓ Inga appar eller notiser</p><p>✓ Mobilen kan ladda utanför sovrummet</p>",
+                    "text": "<p>✓ Tyst vibrationslarm direkt på armen</p><p>✓ Räknar steg, kalorier och sömn</p><p>✓ Inga appar eller notiser</p><p>✓ Mobilen kan ladda utanför sovrummet</p>",
                     "type_preset": "paragraph",
                     "alignment": "left",
                     "text_color": "",
@@ -1927,12 +1999,192 @@
             "max_width": "normal"
           },
           "blocks": {}
+        },
+        "rad3": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "s7": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "background_color": "#F2F4F7",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E4E8EE",
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "l": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Träning</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "left",
+                    "text_color": "#4B5262",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "v": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Steg, km, kalorier</h3>",
+                    "type_preset": "h4",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "l",
+                "v"
+              ]
+            },
+            "s8": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "background_color": "#F2F4F7",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E4E8EE",
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "l": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sömn</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "left",
+                    "text_color": "#4B5262",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "v": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Sömnmätning</h3>",
+                    "type_preset": "h4",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "l",
+                "v"
+              ]
+            },
+            "s9": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "background_color": "#F2F4F7",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E4E8EE",
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "l": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Stoppur</p>",
+                    "type_preset": "paragraph",
+                    "alignment": "left",
+                    "text_color": "#4B5262",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                },
+                "v": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Ja, med dataminne</h3>",
+                    "type_preset": "h4",
+                    "alignment": "left",
+                    "text_color": "",
+                    "width": "100%",
+                    "max_width": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "l",
+                "v"
+              ]
+            }
+          },
+          "block_order": [
+            "s7",
+            "s8",
+            "s9"
+          ]
         }
       },
       "block_order": [
         "h",
         "rad1",
         "rad2",
+        "rad3",
         "not"
       ],
       "settings": {
