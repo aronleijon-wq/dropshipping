@@ -68,7 +68,7 @@
       "settings": {
         "speed": 4,
         "section_width": "full-width",
-        "background_color": "#161B2E",
+        "background_color": "#FFB547",
         "divider_width": 0,
         "padding-block-start": 9,
         "padding-block-end": 9
@@ -134,7 +134,7 @@
         "actions_font_size": "0.875rem",
         "actions_font": "body",
         "actions_text_case": "none",
-        "background_color_top": "{{ settings.color_palette.color8 }}",
+        "background_color_top": "#0E1220",
         "bubble_style": "default",
         "enable_transparent_header_home": false,
         "home_inverse_logo": false,

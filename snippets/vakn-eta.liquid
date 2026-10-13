@@ -1,4 +1,11 @@
-<div style="border:1px solid rgba(255,181,71,.45);background:rgba(255,181,71,.07);border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.6">
+{% doc %}
+  Leveransruta med beräknat leveransdatum (idag + 7–12 arbetsdagar, räknas i webbläsaren).
+  Utan JavaScript visas "7–12 arbetsdagar".
+
+  @example
+  {% render 'vakn-eta' %}
+{% enddoc %}
+<div class="vk-eta-box">
 <div>🚚 Beräknad leverans: <strong class="vk-eta">7–12 arbetsdagar</strong></div>
 <div>📦 Fri frakt med spårning · 30 dagars öppet köp</div>
 </div>
@@ -9,3 +16,15 @@ function f(d){return d.toLocaleDateString('sv-SE',{weekday:'short',day:'numeric'
 function run(){var n=new Date();document.querySelectorAll('.vk-eta').forEach(function(e){e.textContent=f(addBiz(n,7))+' – '+f(addBiz(n,12));});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();
 </script>
+
+{% stylesheet %}
+  .vk-eta-box {
+    --vk-accent: var(--color-primary-button-background);
+    padding: 14px 16px;
+    border: 1px solid color-mix(in srgb, var(--vk-accent) 55%, transparent);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--vk-accent) 9%, transparent);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+{% endstylesheet %}

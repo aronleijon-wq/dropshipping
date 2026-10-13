@@ -11,6 +11,144 @@
   "type": "footer",
   "name": "t:names.footer",
   "sections": {
+    "vk_footer": {
+      "type": "footer",
+      "blocks": {
+        "vk_brand": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "gap": 12,
+            "width": "fill"
+          },
+          "blocks": {
+            "logo": {
+              "type": "logo",
+              "settings": {
+                "unit": "pixel",
+                "pixel_height": 36
+              },
+              "blocks": {}
+            },
+            "pitch": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Sportklocka med väckarlarm – upp i tid utan mobilen.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "left",
+                "text_color": "#AEB4C8"
+              },
+              "blocks": {}
+            },
+            "pay": {
+              "type": "payment-icons",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "logo",
+            "pitch",
+            "pay"
+          ]
+        },
+        "vk_service": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "gap": 12,
+            "width": "fill"
+          },
+          "blocks": {
+            "rubrik": {
+              "type": "text",
+              "settings": {
+                "text": "<h4>Kundservice</h4>",
+                "type_preset": "h4",
+                "width": "100%",
+                "alignment": "left",
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "lankar": {
+              "type": "text",
+              "settings": {
+                "text": "<p><a href=\"/pages/contact\">Kontakta oss</a></p><p><a href=\"/policies/privacy-policy\">Integritetspolicy</a></p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "left",
+                "text_color": "#AEB4C8"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "rubrik",
+            "lankar"
+          ]
+        },
+        "vk_trygg": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "gap": 12,
+            "width": "fill"
+          },
+          "blocks": {
+            "rubrik": {
+              "type": "text",
+              "settings": {
+                "text": "<h4>Trygg handel</h4>",
+                "type_preset": "h4",
+                "width": "100%",
+                "alignment": "left",
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "punkter": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Fri frakt inom Sverige</p><p>30 dagars öppet köp</p><p>Säker betalning</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "left",
+                "text_color": "#AEB4C8"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "rubrik",
+            "punkter"
+          ]
+        }
+      },
+      "block_order": [
+        "vk_brand",
+        "vk_service",
+        "vk_trygg"
+      ],
+      "name": "t:names.footer",
+      "settings": {
+        "section_width": "page-width",
+        "gap": 40,
+        "background_color": "{{ settings.color_palette.color7 }}",
+        "padding-block-start": 56,
+        "padding-block-end": 24
+      }
+    },
     "footer_utilities_jLGE8U": {
       "type": "footer-utilities",
       "blocks": {
@@ -51,6 +189,7 @@
     }
   },
   "order": [
+    "vk_footer",
     "footer_utilities_jLGE8U"
   ]
 }

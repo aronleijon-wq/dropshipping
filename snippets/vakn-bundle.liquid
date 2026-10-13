@@ -1,3 +1,13 @@
+{% doc %}
+  Mängdrabattrutor (1/2/3 st) för produktformuläret. Priserna räknas från produktens pris
+  och motsvarar de automatiska rabatterna (2 st −20 %, 3 st −30 %). Klick sätter antalet i
+  Horizons quantity-selector-component i samma sektion.
+
+  @param {object} [product] - Produkten. Faller tillbaka på closest.product.
+
+  @example
+  {% render 'vakn-bundle', product: closest.product %}
+{% enddoc %}
 {%- assign prod = product | default: closest.product -%}
 {%- assign p = prod.price -%}
 {%- assign t2 = p | times: 16 | divided_by: 10 -%}
@@ -27,33 +37,6 @@
   </button>
   <div class="vk-b-note">Rabatten dras automatiskt i kassan. Blanda gärna färger.</div>
 </div>
-<style>
-.vk-bundle{display:flex;flex-direction:column;gap:10px;margin:4px 0}
-.vk-b-title{font-weight:800;font-size:15px;letter-spacing:.02em}
-.vk-tier{position:relative;display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;
-  background:#161B2E;color:#EEF0F7;border:1.5px solid #2A3150;border-radius:14px;padding:14px 16px;font:inherit}
-.vk-tier.is-on{border-color:#FFB547;background:rgba(255,181,71,.08)}
-.vk-r{flex:0 0 18px;height:18px;border-radius:50%;border:2px solid #5A6385}
-.vk-tier.is-on .vk-r{border-color:#FFB547;box-shadow:inset 0 0 0 4px #161B2E;background:#FFB547}
-.vk-l{display:flex;flex-direction:column;flex:1}
-.vk-l small{color:#AEB4C8;font-size:13px}
-.vk-p{display:flex;flex-direction:column;align-items:flex-end}
-.vk-p s{color:#7D85A3;font-size:13px}
-.vk-tag{position:absolute;top:-10px;right:14px;background:#FFB547;color:#0E1220;font-size:11px;font-weight:800;letter-spacing:.05em;padding:3px 10px;border-radius:999px}
-.vk-tag2{background:#EEF0F7}
-.vk-b-note{color:#AEB4C8;font-size:13px}
-.vk-tier.is-on{box-shadow:0 8px 24px -12px rgba(255,181,71,.6)}
-.vk-tag{overflow:hidden}
-@media (prefers-reduced-motion:no-preference){
-  .vk-tier{transition:transform .2s cubic-bezier(.2,.7,.2,1),border-color .2s,background-color .2s,box-shadow .2s}
-  @media (hover:hover){.vk-tier:not(.is-on):hover{transform:translateY(-2px);border-color:#5A6385}}
-  .vk-tier:active{transform:scale(.985)}
-  .vk-tier.is-on .vk-r{animation:vk-dot .35s ease}
-  .vk-tag::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.6) 50%,transparent 70%);transform:translateX(-120%);animation:vk-shine 3.5s ease-in-out 1s infinite}
-}
-@keyframes vk-dot{0%{transform:scale(.5)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
-@keyframes vk-shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
-</style>
 <script>
 (function(){
   if(window.__vkB)return;window.__vkB=1;
@@ -90,3 +73,96 @@
   });
 })();
 </script>
+
+{% stylesheet %}
+  .vk-bundle {
+    --vk-accent: var(--color-primary-button-background);
+    --vk-line: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-15));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-block: 4px;
+  }
+  .vk-b-title {
+    font-family: var(--font-accent--family);
+    font-weight: var(--font-accent--weight);
+    font-size: 1.125rem;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+  .vk-tier {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid var(--vk-line);
+    border-radius: 14px;
+    background: var(--palette-lightest);
+    color: var(--palette-darkest);
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+  }
+  .vk-tier.is-on {
+    border-color: var(--vk-accent);
+    background: color-mix(in srgb, var(--vk-accent) 10%, var(--palette-lightest));
+    box-shadow: 0 8px 24px -14px color-mix(in srgb, var(--vk-accent) 80%, transparent);
+  }
+  .vk-tier:focus-visible { outline: 2px solid var(--palette-darkest); outline-offset: 2px; }
+  .vk-r {
+    flex: 0 0 18px;
+    height: 18px;
+    border: 2px solid rgb(var(--palette-darkest-rgb) / var(--opacity-40));
+    border-radius: 50%;
+  }
+  .vk-tier.is-on .vk-r {
+    border-color: var(--vk-accent);
+    background: var(--vk-accent);
+    box-shadow: inset 0 0 0 3px var(--palette-lightest);
+  }
+  .vk-l { display: flex; flex: 1; flex-direction: column; min-width: 0; }
+  .vk-l strong { font-family: var(--font-accent--family); font-size: 1.125rem; text-transform: uppercase; }
+  .vk-l small { color: rgb(var(--palette-darkest-rgb) / var(--opacity-70)); font-size: 13px; }
+  .vk-p { display: flex; flex-direction: column; align-items: flex-end; }
+  .vk-p strong { font-size: 1.0625rem; }
+  .vk-p s { color: rgb(var(--palette-darkest-rgb) / var(--opacity-60)); font-size: 13px; }
+  .vk-tag {
+    position: absolute;
+    inset-block-start: -10px;
+    inset-inline-end: 14px;
+    overflow: hidden;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--vk-accent);
+    color: var(--color-primary-button-text);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .05em;
+  }
+  .vk-tag2 { background: var(--palette-darkest); color: var(--palette-lightest); }
+  .vk-b-note { color: var(--color-foreground-muted); font-size: 13px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .vk-tier {
+      transition: transform var(--animation-speed-slow) var(--ease-out-cubic), border-color var(--animation-speed-slow),
+        background-color var(--animation-speed-slow), box-shadow var(--animation-speed-slow);
+    }
+    .vk-tier:active { transform: scale(.985); }
+    .vk-tier.is-on .vk-r { animation: vk-dot .35s var(--ease-out-cubic); }
+    .vk-tag::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / var(--opacity-60)) 50%, transparent 70%);
+      transform: translateX(-120%);
+      animation: vk-shine 3.5s ease-in-out 1s infinite;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) and (hover: hover) {
+    .vk-tier:not(.is-on):hover { transform: translateY(-2px); border-color: rgb(var(--palette-darkest-rgb) / var(--opacity-40)); }
+  }
+  @keyframes vk-dot { 0% { transform: scale(.5); } 60% { transform: scale(1.15); } 100% { transform: scale(1); } }
+  @keyframes vk-shine { 0%, 60% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+{% endstylesheet %}

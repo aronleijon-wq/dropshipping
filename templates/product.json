@@ -374,7 +374,7 @@
                         "width": 22,
                         "link": "",
                         "open_in_new_tab": false,
-                        "icon_color": "#ffb547"
+                        "icon_color": "#B54708"
                       },
                       "blocks": {}
                     },
@@ -455,7 +455,7 @@
                         "width": 22,
                         "link": "",
                         "open_in_new_tab": false,
-                        "icon_color": "#ffb547"
+                        "icon_color": "#B54708"
                       },
                       "blocks": {}
                     },
@@ -536,7 +536,7 @@
                         "width": 22,
                         "link": "",
                         "open_in_new_tab": false,
-                        "icon_color": "#ffb547"
+                        "icon_color": "#B54708"
                       },
                       "blocks": {}
                     },
@@ -831,7 +831,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#161b2e",
+        "background_color": "#0E1220",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
