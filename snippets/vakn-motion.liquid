@@ -1,0 +1,120 @@
+{%- comment -%}
+  VAKN: animationer och visuella detaljer. Renderas i <head> i layout/theme.liquid.
+  Allt rörligt ligger under prefers-reduced-motion: no-preference.
+  Scroll-animationer stängs av i temaredigeraren så att allt syns när man redigerar.
+{%- endcomment -%}
+<style>
+  :root { --vk-amber: #FFB547; --vk-ease: cubic-bezier(.2, .7, .2, 1); }
+
+  /* Hero: rubrik med toning, accentfärg på överraden */
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    [id$="__hero"] h1 {
+      background: linear-gradient(100deg, #EEF0F7 0%, #EEF0F7 38%, var(--vk-amber) 50%, #EEF0F7 62%, #EEF0F7 100%) 100% 0 / 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      width: fit-content;
+    }
+  }
+  [id$="__hero"] .group-block-content > .text-block:first-child strong { color: var(--vk-amber); letter-spacing: .08em; }
+
+  /* Så funkar det: stegnummer som runda accentmärken */
+  [id$="__steg"] .group-block .group-block .text-block:first-child h3 {
+    display: inline-grid; place-items: center; width: 48px; height: 48px; margin: 0;
+    border-radius: 50%; background: var(--vk-amber); color: #0E1220; font-size: 22px; line-height: 1;
+    box-shadow: 0 0 0 6px rgba(255, 181, 71, .15);
+  }
+  [id$="__who"] .group-block .group-block .text-block:first-child h3 { display: inline-block; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    /* Knappar: lyft och glöd */
+    .button:not(.button-unstyled) {
+      transition: transform .25s var(--vk-ease), box-shadow .25s var(--vk-ease), background-color .2s, color .2s;
+    }
+    .button:not(.button-unstyled):not([disabled]):hover { transform: translateY(-2px); box-shadow: 0 10px 28px -8px rgba(255, 181, 71, .55); }
+    .button:not(.button-unstyled):not([disabled]):active { transform: translateY(0) scale(.98); }
+    button[name="add"]:not([disabled]) { animation: vk-glow 3.2s ease-in-out 1.5s infinite; }
+    button[name="add"]:hover { animation: none; }
+
+    /* Hero: innehållet glider in i tur och ordning, bilden svävar */
+    [id$="__hero"] .group-block-content > * { animation: vk-up .7s var(--vk-ease) both; }
+    [id$="__hero"] .group-block-content > :nth-child(2) { animation-delay: .1s; }
+    [id$="__hero"] .group-block-content > :nth-child(3) { animation-delay: .2s; }
+    [id$="__hero"] .group-block-content > :nth-child(4) { animation-delay: .3s; }
+    [id$="__hero"] .group-block-content > :nth-child(5) { animation-delay: .4s; }
+    [id$="__hero"] .image-block { animation: vk-pop .9s var(--vk-ease) .15s both; filter: drop-shadow(0 24px 48px rgba(255, 181, 71, .18)); }
+    [id$="__hero"] .image-block__image { animation: vk-float 6s ease-in-out 1.2s infinite; }
+    [id$="__hero"] h1 { animation: vk-sheen 7s ease-in-out 1s infinite; }
+
+    /* Hero och CTA: mjukt rörligt ljus i bakgrunden */
+    [id$="__hero"] .section-background,
+    [id$="__cta"] .section-background {
+      background-image:
+        radial-gradient(38% 55% at 78% 40%, rgba(255, 181, 71, .14), transparent 70%),
+        radial-gradient(34% 50% at 12% 85%, rgba(98, 120, 255, .12), transparent 70%);
+      background-size: 140% 140%;
+      animation: vk-drift 18s ease-in-out infinite alternate;
+    }
+
+    /* Kort: lyft vid hover, emoji vickar */
+    @media (hover: hover) {
+      [id$="__who"] .group-block .group-block,
+      [id$="__steg"] .group-block .group-block {
+        transition: transform .35s var(--vk-ease), border-color .35s, box-shadow .35s;
+      }
+      [id$="__who"] .group-block .group-block:hover,
+      [id$="__steg"] .group-block .group-block:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 181, 71, .6);
+        box-shadow: 0 18px 40px -18px rgba(255, 181, 71, .35);
+      }
+      [id$="__who"] .group-block .group-block .text-block:first-child h3 { transition: transform .4s var(--vk-ease); }
+      [id$="__who"] .group-block .group-block:hover .text-block:first-child h3 { transform: rotate(-10deg) scale(1.2); }
+    }
+
+    /* Scroll: sektioner och kort tonas in (klasser sätts av skriptet nedan) */
+    .vk-rv { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--vk-ease), transform .8s var(--vk-ease); }
+    .vk-rv-c { opacity: 0; transform: translateY(24px) scale(.98); transition: opacity .7s var(--vk-ease), transform .7s var(--vk-ease); transition-delay: var(--vk-d, 0s); }
+    .vk-in, .vk-in .vk-rv-c { opacity: 1; transform: none; }
+  }
+
+  @keyframes vk-up { from { opacity: 0; transform: translateY(18px); } }
+  @keyframes vk-pop { from { opacity: 0; transform: scale(.94) translateY(12px); } }
+  @keyframes vk-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @keyframes vk-sheen { 0% { background-position: 100% 0; } 45%, 100% { background-position: 0 0; } }
+  @keyframes vk-drift { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
+  @keyframes vk-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 181, 71, 0); } 50% { box-shadow: 0 0 0 6px rgba(255, 181, 71, .2); } }
+</style>
+{%- unless request.design_mode -%}
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  function init(){
+    var secs=document.querySelectorAll('#MainContent > .shopify-section');
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var s=en.target;io.unobserve(s);s.classList.add('vk-in');
+        /* städa bort klasserna när animationen är klar */
+        setTimeout(function(){
+          s.classList.remove('vk-rv','vk-in');
+          s.querySelectorAll('.vk-rv-c').forEach(function(c){c.classList.remove('vk-rv-c');c.style.removeProperty('--vk-d');});
+        },1600);
+      });
+    },{rootMargin:'0px 0px -60px 0px'});
+    secs.forEach(function(s,i){
+      /* första sektionen och allt som redan syns lämnas orört */
+      if(i===0||s.getBoundingClientRect().top<window.innerHeight)return;
+      s.classList.add('vk-rv');
+      var cards=s.querySelectorAll('.group-block .group-block');
+      if(cards.length>1&&cards.length<7){
+        cards.forEach(function(c,j){c.classList.add('vk-rv-c');c.style.setProperty('--vk-d',(0.15+j*0.12)+'s');});
+      }
+      io.observe(s);
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+{%- endunless -%}

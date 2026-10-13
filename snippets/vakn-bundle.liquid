@@ -42,6 +42,17 @@
 .vk-tag{position:absolute;top:-10px;right:14px;background:#FFB547;color:#0E1220;font-size:11px;font-weight:800;letter-spacing:.05em;padding:3px 10px;border-radius:999px}
 .vk-tag2{background:#EEF0F7}
 .vk-b-note{color:#AEB4C8;font-size:13px}
+.vk-tier.is-on{box-shadow:0 8px 24px -12px rgba(255,181,71,.6)}
+.vk-tag{overflow:hidden}
+@media (prefers-reduced-motion:no-preference){
+  .vk-tier{transition:transform .2s cubic-bezier(.2,.7,.2,1),border-color .2s,background-color .2s,box-shadow .2s}
+  @media (hover:hover){.vk-tier:not(.is-on):hover{transform:translateY(-2px);border-color:#5A6385}}
+  .vk-tier:active{transform:scale(.985)}
+  .vk-tier.is-on .vk-r{animation:vk-dot .35s ease}
+  .vk-tag::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.6) 50%,transparent 70%);transform:translateX(-120%);animation:vk-shine 3.5s ease-in-out 1s infinite}
+}
+@keyframes vk-dot{0%{transform:scale(.5)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
+@keyframes vk-shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 </style>
 <script>
 (function(){
