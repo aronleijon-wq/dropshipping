@@ -853,28 +853,28 @@
         "clip1": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/IMG-0428.MP4",
+            "video": "",
             "caption": ""
           }
         },
         "clip2": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/IMG-0431.MP4",
+            "video": "",
             "caption": ""
           }
         },
         "clip3": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/IMG-0432.MP4",
+            "video": "",
             "caption": ""
           }
         },
         "clip4": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/IMG-0433.MP4",
+            "video": "",
             "caption": ""
           }
         }
