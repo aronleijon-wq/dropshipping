@@ -853,28 +853,28 @@
         "clip1": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/sleepwell_video_1.mp4",
+            "video": "shopify://files/videos/IMG-0428.MP4",
             "caption": ""
           }
         },
         "clip2": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/sleepwell_video_2.mp4",
+            "video": "shopify://files/videos/IMG-0432.MP4",
             "caption": ""
           }
         },
         "clip3": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/sleepwell_video_3.mp4",
+            "video": "",
             "caption": ""
           }
         },
         "clip4": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/sleepwell_video_4.mp4",
+            "video": "",
             "caption": ""
           }
         }
