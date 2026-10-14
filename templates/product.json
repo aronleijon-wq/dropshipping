@@ -171,7 +171,7 @@
             "fordelar": {
               "type": "text",
               "settings": {
-                "text": "<p>★★★★★ 5 av 5 stjärnor · 14 betyg</p><ul><li>✔ <strong>Tyst vibrationslarm</strong> – väcker bara dig, inte resten av huset</li><li>✔ <strong>Steg, km och kalorier</strong> – plus sömnmätning och stoppur</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
+                "text": "<p>⭐⭐⭐⭐⭐ 5 av 5 stjärnor · 14 verifierade betyg</p><ul><li>✔ <strong>Tyst vibrationslarm</strong> – väcker bara dig, inte resten av huset</li><li>✔ <strong>Steg, km och kalorier</strong> – plus sömnmätning och stoppur</li><li>✔ <strong>Tydlig digital display</strong></li><li>✔ <strong>Tål regn och handtvätt</strong> (3 bar)</li><li>✔ <strong>Uppladdningsbar</strong> – lätt och bekväm</li></ul>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -374,7 +374,7 @@
                         "width": 22,
                         "link": "",
                         "open_in_new_tab": false,
-                        "icon_color": "#B54708"
+                        "icon_color": "#b54708"
                       },
                       "blocks": {}
                     },
@@ -455,7 +455,7 @@
                         "width": 22,
                         "link": "",
                         "open_in_new_tab": false,
-                        "icon_color": "#B54708"
+                        "icon_color": "#b54708"
                       },
                       "blocks": {}
                     },
@@ -536,7 +536,7 @@
                         "width": 22,
                         "link": "",
                         "open_in_new_tab": false,
-                        "icon_color": "#B54708"
+                        "icon_color": "#b54708"
                       },
                       "blocks": {}
                     },
@@ -791,7 +791,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>249 kr · Fri frakt · 2 st spara 20 % · 3 st spara 30 %</p>",
+            "text": "<p>299 kr · Fri frakt · 2 st spara 20 % · 3 st spara 30 %</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -831,7 +831,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFB547",
+        "background_color": "#ffb547",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -846,10 +846,57 @@
         "padding-block-start": 64,
         "padding-block-end": 64
       }
+    },
+    "reel": {
+      "type": "vk-video-reel",
+      "blocks": {
+        "clip1": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/IMG-0428.MP4",
+            "caption": ""
+          }
+        },
+        "clip2": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/IMG-0431.MP4",
+            "caption": ""
+          }
+        },
+        "clip3": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/IMG-0432.MP4",
+            "caption": ""
+          }
+        },
+        "clip4": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/IMG-0433.MP4",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "clip1",
+        "clip2",
+        "clip3",
+        "clip4"
+      ],
+      "settings": {
+        "heading": "SleepWell i användning",
+        "text": "Tyst vibration på armen – se hur det funkar.",
+        "background_color": "",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
     }
   },
   "order": [
     "main",
+    "reel",
     "cta"
   ]
 }

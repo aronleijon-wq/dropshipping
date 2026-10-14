@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Reproduciraj 3D model",
     "play_video": "Reproduciraj videozapis",
+    "unmute_video": "Uključi zvuk",
+    "mute_video": "Isključi zvuk",
     "unit_price": "Jedinična cijena",
     "country_results_count": "Broj rezultata: {{ count }}",
     "slideshow_pause": "Pauziraj prezentaciju",

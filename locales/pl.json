@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Odtwórz model 3D",
     "play_video": "Odtwórz film",
+    "unmute_video": "Włącz dźwięk",
+    "mute_video": "Wyłącz dźwięk",
     "unit_price": "Cena jednostkowa",
     "country_results_count": "Liczba wyników: {{ count }}",
     "slideshow_pause": "Wstrzymaj pokaz slajdów",

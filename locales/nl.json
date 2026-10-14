@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "3D-model afspelen",
     "play_video": "Video afspelen",
+    "unmute_video": "Geluid aan",
+    "mute_video": "Geluid uit",
     "unit_price": "Eenheidsprijs",
     "country_results_count": "{{ count }} resultaten",
     "slideshow_pause": "Diavoorstelling pauzeren",

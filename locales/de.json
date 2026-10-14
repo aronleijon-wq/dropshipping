@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "3D-Modell abspielen",
     "play_video": "Video abspielen",
+    "unmute_video": "Ton einschalten",
+    "mute_video": "Ton ausschalten",
     "unit_price": "Stückpreis",
     "country_results_count": "{{ count }} Ergebnisse",
     "slideshow_pause": "Slideshow pausieren",

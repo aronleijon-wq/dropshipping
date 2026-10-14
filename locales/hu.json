@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "3D-modell lejátszása",
     "play_video": "Videó lejátszása",
+    "unmute_video": "Hang bekapcsolása",
+    "mute_video": "Hang kikapcsolása",
     "unit_price": "Egységár",
     "country_results_count": "{{ count }} találat",
     "slideshow_pause": "Diavetítés megállítása",

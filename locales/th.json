@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "เล่นโมเดล 3 มิติ",
     "play_video": "เล่นวิดีโอ",
+    "unmute_video": "เปิดเสียง",
+    "mute_video": "ปิดเสียง",
     "unit_price": "ราคาต่อหน่วย",
     "country_results_count": "ผลลัพธ์ {{ count }} รายการ",
     "slideshow_pause": "หยุดสไลด์โชว์ชั่วคราว",

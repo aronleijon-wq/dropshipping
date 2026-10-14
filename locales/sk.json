@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Prehrať 3D model",
     "play_video": "Prehrať video",
+    "unmute_video": "Zapnúť zvuk",
+    "mute_video": "Vypnúť zvuk",
     "unit_price": "Jednotková cena",
     "country_results_count": "Počet výsledkov: {{ count }}",
     "slideshow_pause": "Pozastaviť prezentáciu",

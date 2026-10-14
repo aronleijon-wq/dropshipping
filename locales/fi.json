@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Toista 3D-malli",
     "play_video": "Toista video",
+    "unmute_video": "Ääni päälle",
+    "mute_video": "Ääni pois",
     "unit_price": "Yksikköhinta",
     "country_results_count": "{{ count }} tulosta",
     "slideshow_pause": "Keskeytä diaesitys",

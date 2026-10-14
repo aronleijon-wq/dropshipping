@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Predvajaj 3D-model",
     "play_video": "Predvajaj videoposnetek",
+    "unmute_video": "Vklopi zvok",
+    "mute_video": "Izklopi zvok",
     "unit_price": "Cena na enoto",
     "country_results_count": "Št. rezultatov: {{ count }}",
     "slideshow_pause": "Zaustavi diaprojekcijo",

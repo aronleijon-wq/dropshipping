@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Phát mô hình 3D",
     "play_video": "Phát video",
+    "unmute_video": "Bật âm thanh",
+    "mute_video": "Tắt âm thanh",
     "unit_price": "Đơn giá",
     "country_results_count": "{{ count }} kết quả",
     "slideshow_pause": "Tạm dừng bản trình chiếu",

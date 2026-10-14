@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "3D 모델 재생",
     "play_video": "동영상 재생",
+    "unmute_video": "소리 켜기",
+    "mute_video": "소리 끄기",
     "unit_price": "단가",
     "country_results_count": "결과 {{ count }}개",
     "slideshow_pause": "슬라이드 쇼 멈춤",

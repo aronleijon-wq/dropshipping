@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Reproducir el modelo 3D",
     "play_video": "Reproducir el video",
+    "unmute_video": "Activar sonido",
+    "mute_video": "Desactivar sonido",
     "unit_price": "Precio unitario",
     "country_results_count": "{{ count }} resultados",
     "slideshow_pause": "Pausar la presentación de diapositivas",

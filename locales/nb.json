@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Spill av 3D-modell",
     "play_video": "Spill av video",
+    "unmute_video": "Slå på lyd",
+    "mute_video": "Slå av lyd",
     "unit_price": "Enhetspris",
     "country_results_count": "{{ count }} resultater",
     "slideshow_pause": "Sett lysbildefremvisningen på pause",

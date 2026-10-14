@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Paleisti 3D modelį",
     "play_video": "Paleisti vaizdo įrašą",
+    "unmute_video": "Įjungti garsą",
+    "mute_video": "Išjungti garsą",
     "unit_price": "Vieneto kaina",
     "country_results_count": "{{ count }} rezultatai (-ų)",
     "slideshow_pause": "Pristabdyti skaidrių peržiūrą",

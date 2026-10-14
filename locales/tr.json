@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "3B modeli oynat",
     "play_video": "Videoyu oynat",
+    "unmute_video": "Sesi aç",
+    "mute_video": "Sesi kapat",
     "unit_price": "Birim fiyatı",
     "country_results_count": "{{ count }} sonuç",
     "slideshow_pause": "Slayt gösterisini duraklat",

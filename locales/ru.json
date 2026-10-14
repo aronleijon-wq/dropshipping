@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Открыть объемную модель",
     "play_video": "Воспроизвести видео",
+    "unmute_video": "Включить звук",
+    "mute_video": "Выключить звук",
     "unit_price": "Цена за единицу",
     "country_results_count": "Результаты: {{ count }}",
     "slideshow_pause": "Приостановить показ слайд-шоу",

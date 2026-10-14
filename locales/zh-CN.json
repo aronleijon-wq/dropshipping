@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "演示 3D 模型",
     "play_video": "播放视频",
+    "unmute_video": "打开声音",
+    "mute_video": "关闭声音",
     "unit_price": "单价",
     "country_results_count": "{{ count }} 个结果",
     "slideshow_pause": "暂停幻灯片",

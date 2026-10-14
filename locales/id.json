@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Putar model 3D",
     "play_video": "Putar video",
+    "unmute_video": "Nyalakan suara",
+    "mute_video": "Matikan suara",
     "unit_price": "Harga satuan",
     "country_results_count": "{{ count }} hasil",
     "slideshow_pause": "Jeda slideshow",

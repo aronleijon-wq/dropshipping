@@ -31,6 +31,8 @@
   "accessibility": {
     "play_model": "Αναπαραγωγή μοντέλου 3D",
     "play_video": "Αναπαραγωγή βίντεο",
+    "unmute_video": "Ενεργοποίηση ήχου",
+    "mute_video": "Απενεργοποίηση ήχου",
     "unit_price": "Τιμή μονάδας",
     "country_results_count": "{{ count }} αποτελέσματα",
     "slideshow_pause": "Παύση παρουσίασης",
