@@ -4,8 +4,8 @@ Domän: https://sleep-well.se (primär, DNS hos Simply.com). Live-tema: "SleepWe
 
 Temat i repot motsvarar:
 - Live och utkast växlar: det tema som är opublicerat får nya ändringar och publiceras sedan.
-- Live (2026-10-14): "SleepWell – video" (id 209715069258). Nytt utkast med SLUTSÅLD-etikett:
-  "SleepWell – slutsåld" (id 209762189642), kopierat från live 2026-10-14. Äldre teman är inte i synk.
+- Live (2026-10-14): "SleepWell – video" (id 209715069258). Nytt utkast med ny startsida (vk-hero) och SLUTSÅLD-etikett:
+  "SleepWell – ny startsida" (id 209762189642), kopierat från live 2026-10-14. Äldre teman är inte i synk.
 - Pris: 299 kr/st. Automatiska rabatter: 2 st −20 % (479 kr), 3 st −30 % (628 kr). Inköp ca 137 kr/st.
   Kontrollera med Admin API (themes { role }) vilket som är MAIN innan uppladdning.
 
