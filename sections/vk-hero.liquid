@@ -1,0 +1,589 @@
+{% comment %}
+  Section contract.
+  Startsidans första skärm: rubrik, kort säljtext, köpknapp med produktens aktuella pris,
+  förtroenderad och produktbild på en accentcirkel med vibrationsringar och funktionsetiketter.
+  Rörelse körs bara vid prefers-reduced-motion: no-preference.
+  @example
+  <!-- Läggs först på startsidan. Välj produkt och friställd produktbild i temaredigeraren. -->
+{% endcomment %}
+
+{% liquid
+  assign hero_product = section.settings.product
+  assign hero_link = section.settings.button_link
+  if hero_link == blank and hero_product != blank
+    assign hero_link = hero_product.url
+  endif
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+<div
+  class="section section--page-width spacing-style vk-hero{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  <div class="vk-hero__grid">
+    <div class="vk-hero__copy">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="vk-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+
+      <h1 class="vk-hero__title h1">
+        {{- section.settings.heading | escape -}}
+        {%- if section.settings.heading_accent != blank -%}
+          <br><span class="vk-hero__accent">{{ section.settings.heading_accent | escape }}</span>
+        {%- endif -%}
+      </h1>
+
+      {%- if section.settings.text != blank -%}
+        <div class="vk-hero__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.button_label != blank -%}
+        <div class="vk-hero__actions">
+          <a
+            class="button vk-hero__cta"
+            {% if hero_link != blank %}
+              href="{{ hero_link }}"
+            {% else %}
+              role="link" aria-disabled="true"
+            {% endif %}
+          >
+            {{- section.settings.button_label | escape -}}
+            {%- if hero_product != blank and section.settings.show_price -%}
+              <span class="vk-hero__price">
+                {{- hero_product.price | money_without_trailing_zeros -}}
+              </span>
+            {%- endif -%}
+          </a>
+          {%- if section.settings.button_note != blank -%}
+            <p class="vk-hero__note">{{ section.settings.button_note | escape }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- liquid
+        assign trust_items = ''
+        if section.settings.trust_1 != blank
+          assign trust_items = trust_items | append: section.settings.trust_1 | append: '|'
+        endif
+        if section.settings.trust_2 != blank
+          assign trust_items = trust_items | append: section.settings.trust_2 | append: '|'
+        endif
+        if section.settings.trust_3 != blank
+          assign trust_items = trust_items | append: section.settings.trust_3 | append: '|'
+        endif
+        assign trust_items = trust_items | split: '|'
+      -%}
+      {%- if trust_items.size > 0 -%}
+        <ul class="vk-hero__trust" role="list">
+          {%- for item in trust_items -%}
+            <li>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path d="M5 10.5l3.2 3.2L15 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              {{ item | escape }}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    <div class="vk-hero__visual">
+      <div class="vk-hero__stage">
+        <span class="vk-hero__disc" aria-hidden="true"></span>
+        <span class="vk-hero__ring vk-hero__ring--1" aria-hidden="true"></span>
+        <span class="vk-hero__ring vk-hero__ring--2" aria-hidden="true"></span>
+        <span class="vk-hero__ring vk-hero__ring--3" aria-hidden="true"></span>
+
+        {%- if section.settings.image != blank -%}
+          {%- assign image_alt = section.settings.image.alt | default: hero_product.title -%}
+          {{
+            section.settings.image
+            | image_url: width: 1100
+            | image_tag:
+              class: 'vk-hero__image',
+              widths: '360, 480, 640, 860, 1100',
+              sizes: '(min-width: 990px) 34vw, 72vw',
+              loading: 'eager',
+              fetchpriority: 'high',
+              alt: image_alt
+          }}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'vk-hero__image vk-hero__image--placeholder' }}
+        {%- endif -%}
+
+        {%- if section.settings.chip_1 != blank -%}
+          <span class="vk-hero__chip vk-hero__chip--1">{{ section.settings.chip_1 | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.chip_2 != blank -%}
+          <span class="vk-hero__chip vk-hero__chip--2">{{ section.settings.chip_2 | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.chip_3 != blank -%}
+          <span class="vk-hero__chip vk-hero__chip--3">{{ section.settings.chip_3 | escape }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .vk-hero {
+    --vk-hero-accent: var(--color-primary-button-background);
+    --vk-hero-on-accent: var(--color-primary-button-text);
+    overflow: clip;
+  }
+
+  .vk-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  @media screen and (min-width: 990px) {
+    .vk-hero__grid {
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+      gap: 56px;
+    }
+  }
+
+  .vk-hero__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    min-width: 0;
+  }
+
+  .vk-hero__eyebrow {
+    margin: 0;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--vk-hero-accent);
+    color: var(--vk-hero-on-accent);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .vk-hero__title {
+    margin: 0;
+    font-size: clamp(2.75rem, 7vw, 5.25rem);
+    line-height: 1.04;
+    overflow-wrap: anywhere;
+  }
+
+  /* Markeringsrand i accentfärg bakom andra raden; texten behåller förgrundsfärgen för kontrast */
+  .vk-hero__accent {
+    padding-inline: 0.06em 0.12em;
+    background: linear-gradient(
+      to bottom,
+      transparent 52%,
+      var(--vk-hero-accent) 52%,
+      var(--vk-hero-accent) 90%,
+      transparent 90%
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .vk-hero__text {
+    max-width: 46ch;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-80));
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+
+  .vk-hero__text p {
+    margin: 0;
+  }
+
+  .vk-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .vk-hero__cta {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    padding-inline: 34px;
+    font-size: 1.125rem;
+    box-shadow: 0 14px 30px -14px color-mix(in srgb, var(--vk-hero-accent) 90%, transparent);
+  }
+
+  .vk-hero__price {
+    padding-inline-start: 12px;
+    border-inline-start: 2px solid currentColor;
+  }
+
+  .vk-hero__note {
+    margin: 0;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  .vk-hero__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  .vk-hero__trust li {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .vk-hero__trust svg {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50%;
+    background: var(--vk-hero-accent);
+    color: var(--vk-hero-on-accent);
+  }
+
+  @media screen and (max-width: 749px) {
+    .vk-hero__actions,
+    .vk-hero__cta {
+      width: 100%;
+    }
+  }
+
+  .vk-hero__visual {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .vk-hero__stage {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(100%, 520px);
+    aspect-ratio: 1;
+  }
+
+  .vk-hero__disc,
+  .vk-hero__ring {
+    position: absolute;
+    inset: 10%;
+    border-radius: 50%;
+  }
+
+  .vk-hero__disc {
+    background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--vk-hero-accent) 70%, #fff), var(--vk-hero-accent) 70%);
+    box-shadow: 0 30px 60px -30px rgb(var(--palette-darkest-rgb) / var(--opacity-40));
+  }
+
+  .vk-hero__ring {
+    border: 2px solid color-mix(in srgb, var(--vk-hero-accent) 65%, transparent);
+    opacity: 0;
+  }
+
+  .vk-hero__image {
+    position: relative;
+    z-index: 1;
+    width: 62%;
+    height: auto;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 26px 30px rgb(var(--palette-darkest-rgb) / var(--opacity-40)));
+  }
+
+  .vk-hero__chip {
+    position: absolute;
+    z-index: 2;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--palette-lightest);
+    color: var(--palette-darkest);
+    font-size: 0.875rem;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 10px 24px -12px rgb(var(--palette-darkest-rgb) / var(--opacity-40));
+  }
+
+  .vk-hero__chip::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-inline-end: 8px;
+    border-radius: 50%;
+    background: var(--vk-hero-accent);
+    vertical-align: 1px;
+  }
+
+  .vk-hero__chip--1 {
+    inset-block-start: 14%;
+    inset-inline-start: 0;
+  }
+
+  .vk-hero__chip--2 {
+    inset-block-start: 46%;
+    inset-inline-end: -2%;
+  }
+
+  .vk-hero__chip--3 {
+    inset-block-end: 12%;
+    inset-inline-start: 6%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .vk-hero__copy > * {
+      animation: vk-hero-up 0.7s var(--ease-out-cubic) both;
+    }
+
+    .vk-hero__copy > :nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .vk-hero__copy > :nth-child(3) {
+      animation-delay: 0.16s;
+    }
+
+    .vk-hero__copy > :nth-child(4) {
+      animation-delay: 0.24s;
+    }
+
+    .vk-hero__copy > :nth-child(5) {
+      animation-delay: 0.32s;
+    }
+
+    .vk-hero__image {
+      animation: vk-hero-buzz 3.6s ease-in-out 1s infinite;
+    }
+
+    .vk-hero__ring {
+      animation: vk-hero-ring 3.6s ease-out 1s infinite;
+    }
+
+    .vk-hero__ring--2 {
+      animation-delay: 1.25s;
+    }
+
+    .vk-hero__ring--3 {
+      animation-delay: 1.5s;
+    }
+
+    .vk-hero__chip {
+      animation: vk-hero-float 5s ease-in-out infinite;
+    }
+
+    .vk-hero__chip--2 {
+      animation-delay: -1.6s;
+    }
+
+    .vk-hero__chip--3 {
+      animation-delay: -3.2s;
+    }
+  }
+
+  @keyframes vk-hero-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+
+  /* kort "surr" i början av varje cykel, sedan stilla */
+  @keyframes vk-hero-buzz {
+    0%,
+    22%,
+    100% {
+      transform: rotate(-8deg) translateX(0);
+    }
+
+    3%,
+    9%,
+    15% {
+      transform: rotate(-9.5deg) translateX(-3px);
+    }
+
+    6%,
+    12%,
+    18% {
+      transform: rotate(-6.5deg) translateX(3px);
+    }
+  }
+
+  @keyframes vk-hero-ring {
+    0% {
+      opacity: 0.9;
+      transform: scale(0.92);
+    }
+
+    60%,
+    100% {
+      opacity: 0;
+      transform: scale(1.22);
+    }
+  }
+
+  @keyframes vk-hero-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.hero",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "t:settings.text",
+      "default": "Tyst väckarlarm på armen"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading",
+      "default": "Vakna i tid."
+    },
+    {
+      "type": "text",
+      "id": "heading_accent",
+      "label": "t:settings.heading",
+      "default": "Utan att väcka någon."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:settings.text",
+      "default": "<p>SleepWell vibrerar dig vaken – inget pip, ingen som vaknar bredvid dig. Räknar också steg, kalorier och sömn.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:settings.label",
+      "default": "Köp nu"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:settings.link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "t:names.price",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_note",
+      "label": "t:settings.text",
+      "default": "Köp 2 – spara 20 %"
+    },
+    {
+      "type": "text",
+      "id": "trust_1",
+      "label": "t:settings.text",
+      "default": "Fri frakt"
+    },
+    {
+      "type": "text",
+      "id": "trust_2",
+      "label": "t:settings.text",
+      "default": "30 dagars öppet köp"
+    },
+    {
+      "type": "text",
+      "id": "trust_3",
+      "label": "t:settings.text",
+      "default": "Säker betalning"
+    },
+    {
+      "type": "text",
+      "id": "chip_1",
+      "label": "t:settings.text",
+      "default": "Tyst vibration"
+    },
+    {
+      "type": "text",
+      "id": "chip_2",
+      "label": "t:settings.text",
+      "default": "Steg & kalorier"
+    },
+    {
+      "type": "text",
+      "id": "chip_3",
+      "label": "t:settings.text",
+      "default": "Sömnmätning"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.hero"
+    }
+  ]
+}
+{% endschema %}
