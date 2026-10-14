@@ -195,6 +195,28 @@
     }
   }
 
+  /* Slutsåld: liten etikett under värdet (aria-label på input bär redan texten) */
+  .variant-option__button-label:has([data-option-available='false']):not(
+      .variant-option__button-label--has-swatch
+    ) {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .variant-option__sold-out {
+    position: relative;
+    z-index: 3;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: var(--color-variant-text);
+    color: var(--color-variant-background);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
   .variant-option__button-label {
     --variant-picker-stroke-color: var(--color-variant-border);
 

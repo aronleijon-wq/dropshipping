@@ -161,6 +161,11 @@
                   >
                     {{- product_option_value | escape -}}
                   </span>
+                  {% if product_option_value.available == false %}
+                    <span class="variant-option__sold-out" aria-hidden="true">
+                      {{- 'products.product.sold_out' | t -}}
+                    </span>
+                  {% endif %}
                 {% endif %}
                 {% render 'strikethrough-variant', product_option: product_option_value %}
               </label>
