@@ -6,7 +6,7 @@ Temat i repot motsvarar:
 - Live och utkast växlar: det tema som är opublicerat får nya ändringar och publiceras sedan.
 - Live (2026-10-14): "SleepWell – video" (id 209715069258). Nytt utkast med ny startsida (vk-hero) och SLUTSÅLD-etikett:
   "SleepWell – ny startsida" (id 209762189642), kopierat från live 2026-10-14. Äldre teman är inte i synk.
-- Pris: 299 kr/st. Automatiska rabatter: 2 st −20 % (479 kr), 3 st −30 % (628 kr). Inköp ca 137 kr/st.
+- Pris: 399 kr/st (höjt 23 okt 2026, ordinarie pris inför Black Week). Automatiska rabatter: 2 st −20 % (638,40 kr), 3 st −30 % (837,90 kr). Inköp ca 170 kr/st inkl. moms.
   Kontrollera med Admin API (themes { role }) vilket som är MAIN innan uppladdning.
 
 VAKN-specifikt:
