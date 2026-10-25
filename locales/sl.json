@@ -136,6 +136,10 @@
     "back_to_main_menu": "Nazaj na glavni meni"
   },
   "content": {
+    "countdown_days": "dni",
+    "countdown_hours": "ur",
+    "countdown_minutes": "min",
+    "countdown_seconds": "s",
     "reviews": "ocen.",
     "no_results_found": "Nobenega rezultata ni bilo mogoče najti",
     "language": "Jezik",

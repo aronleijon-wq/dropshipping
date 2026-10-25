@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Odliczanie",
     "404": "404",
     "custom_section": "Sekcja niestandardowa",
     "icon": "Ikona",
@@ -171,6 +172,9 @@
     "disclosures": "Informacje prawne"
   },
   "settings": {
+    "countdown_start": "Początek",
+    "countdown_end": "Koniec",
+    "countdown_lead_days": "Dni wyświetlania przed startem",
     "autoplay": "Autoodtwarzanie",
     "background": "Tło",
     "border_radius": "Promień narożnika",
@@ -1091,6 +1095,7 @@
     "disclosures": "Informacje prawne"
   },
   "info": {
+    "countdown_datetime": "Format: 2026-11-26 00:00, w strefie czasowej sklepu",
     "video_alt_text": "Opisz wideo dla użytkowników technologii wspomagających",
     "video_autoplay": "Domyślnie filmy będą wyciszone",
     "video_external": "Użyj adresu URL z YouTube lub Vimeo",

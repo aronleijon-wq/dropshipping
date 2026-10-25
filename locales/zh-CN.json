@@ -132,6 +132,10 @@
     "back_to_main_menu": "返回主菜单"
   },
   "content": {
+    "countdown_days": "天",
+    "countdown_hours": "时",
+    "countdown_minutes": "分",
+    "countdown_seconds": "秒",
     "reviews": "评价",
     "no_results_found": "未找到结果",
     "language": "语言",

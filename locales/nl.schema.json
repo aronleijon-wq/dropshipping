@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Aftelklok",
     "404": "404",
     "custom_section": "Aangepaste sectie",
     "icon": "Pictogram",
@@ -171,6 +172,9 @@
     "disclosures": "Toelichtingen"
   },
   "settings": {
+    "countdown_start": "Start",
+    "countdown_end": "Einde",
+    "countdown_lead_days": "Dagen zichtbaar voor start",
     "autoplay": "Automatisch afspelen",
     "background": "Achtergrond",
     "border_radius": "Hoekradius",
@@ -1091,6 +1095,7 @@
     "disclosures": "Toelichtingen"
   },
   "info": {
+    "countdown_datetime": "Notatie: 2026-11-26 00:00, in de tijdzone van de winkel",
     "carousel_layout_on_mobile": "Op mobiel wordt altijd een carrousel gebruikt",
     "video_alt_text": "Beschrijf de video voor gebruikers van ondersteunende technologie",
     "video_autoplay": "Video's worden standaard gedempt",

@@ -134,6 +134,10 @@
     "back_to_main_menu": "Voltar ao menu principal"
   },
   "content": {
+    "countdown_days": "dias",
+    "countdown_hours": "h",
+    "countdown_minutes": "min",
+    "countdown_seconds": "s",
     "reviews": "avaliações",
     "language": "Idioma",
     "localization_region_and_language": "Região e idioma",

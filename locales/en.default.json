@@ -165,6 +165,10 @@
     }
   },
   "content": {
+    "countdown_days": "days",
+    "countdown_hours": "hrs",
+    "countdown_minutes": "min",
+    "countdown_seconds": "sec",
     "cancel": "Cancel",
     "discount": "Discount",
     "account_title": "Account",

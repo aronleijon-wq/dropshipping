@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Nedtælling",
     "404": "404",
     "colors": "Farvepalet",
     "custom_section": "Brugerdefineret sektion",
@@ -171,6 +172,9 @@
     "disclosures": "Oplysninger"
   },
   "settings": {
+    "countdown_start": "Start",
+    "countdown_end": "Slut",
+    "countdown_lead_days": "Dage vist før start",
     "alignment": "Justering",
     "autoplay": "Automatisk afspilning",
     "background": "Baggrund",
@@ -1091,6 +1095,7 @@
     "disclosures": "Oplysninger"
   },
   "info": {
+    "countdown_datetime": "Format: 2026-11-26 00:00 i butikkens tidszone",
     "carousel_layout_on_mobile": "Karrusellen bruges altid på mobil",
     "video_alt_text": "Beskriv videoen for brugere af hjælpeteknologi",
     "video_autoplay": "Videoer vil som standard være uden lyd",

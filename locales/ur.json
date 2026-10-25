@@ -152,6 +152,10 @@
     }
   },
   "content": {
+    "countdown_days": "دن",
+    "countdown_hours": "گھنٹے",
+    "countdown_minutes": "منٹ",
+    "countdown_seconds": "سیکنڈ",
     "cancel": "منسوخ کریں",
     "discount": "ڈسکاؤنٹ",
     "account_title": "اکاؤنٹ",

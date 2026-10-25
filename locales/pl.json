@@ -136,6 +136,10 @@
     "back_to_main_menu": "Wróć do menu głównego"
   },
   "content": {
+    "countdown_days": "dni",
+    "countdown_hours": "godz",
+    "countdown_minutes": "min",
+    "countdown_seconds": "sek",
     "reviews": "recenzje",
     "language": "Język",
     "localization_region_and_language": "Region i język",

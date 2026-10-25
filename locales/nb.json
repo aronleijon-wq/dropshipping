@@ -132,6 +132,10 @@
     "zoom_media": "Zoom medier {{ index }}"
   },
   "content": {
+    "countdown_days": "dager",
+    "countdown_hours": "timer",
+    "countdown_minutes": "min",
+    "countdown_seconds": "sek",
     "reviews": "anmeldelser",
     "no_results_found": "Fant ingen resultater",
     "language": "Språk",

@@ -136,6 +136,10 @@
     "back_to_main_menu": "Zpět do hlavní nabídky"
   },
   "content": {
+    "countdown_days": "dní",
+    "countdown_hours": "hod",
+    "countdown_minutes": "min",
+    "countdown_seconds": "s",
     "reviews": "recen.",
     "language": "Jazyk",
     "localization_region_and_language": "Oblast a jazyk",

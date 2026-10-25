@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "倒计时",
     "404": "404",
     "colors": "调色板",
     "custom_section": "自定义分区",
@@ -171,6 +172,9 @@
     "disclosures": "披露信息"
   },
   "settings": {
+    "countdown_start": "开始",
+    "countdown_end": "结束",
+    "countdown_lead_days": "开始前显示天数",
     "alignment": "对齐方式",
     "autoplay": "自动播放",
     "background": "背景",
@@ -1091,6 +1095,7 @@
     "disclosures": "披露信息"
   },
   "info": {
+    "countdown_datetime": "格式:2026-11-26 00:00(商店时区)",
     "video_alt_text": "为使用辅助技术的用户描述视频",
     "video_autoplay": "视频将默认静音",
     "video_external": "使用 YouTube 或 Vimeo URL",

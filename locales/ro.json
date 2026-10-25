@@ -134,6 +134,10 @@
     "zoom_media": "Fă zoom pe elementul media {{ index }}"
   },
   "content": {
+    "countdown_days": "zile",
+    "countdown_hours": "ore",
+    "countdown_minutes": "min",
+    "countdown_seconds": "sec",
     "reviews": "recenzii",
     "language": "Limba",
     "localization_region_and_language": "Regiunea și limba",

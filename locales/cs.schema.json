@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Odpočet",
     "404": "404",
     "colors": "Paleta barev",
     "custom_section": "Vlastní sekce",
@@ -171,6 +172,9 @@
     "disclosures": "Prohlášení"
   },
   "settings": {
+    "countdown_start": "Začátek",
+    "countdown_end": "Konec",
+    "countdown_lead_days": "Dny zobrazení před začátkem",
     "alignment": "Zarovnání",
     "autoplay": "Automatické přehrávání",
     "background": "Pozadí",
@@ -1091,6 +1095,7 @@
     "disclosures": "Prohlášení"
   },
   "info": {
+    "countdown_datetime": "Formát: 2026-11-26 00:00, v časovém pásmu obchodu",
     "video_alt_text": "Popište video pro uživatele asistivních technologií",
     "video_autoplay": "Videa budou ve výchozím nastavení ztlumená",
     "video_external": "Použijte URL z YouTube nebo Vimeo",

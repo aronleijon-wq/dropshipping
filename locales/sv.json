@@ -132,6 +132,10 @@
     "zoom_media": "Zooma media {{ index }}"
   },
   "content": {
+    "countdown_days": "dagar",
+    "countdown_hours": "tim",
+    "countdown_minutes": "min",
+    "countdown_seconds": "sek",
     "reviews": "recensioner",
     "language": "Språk",
     "localization_region_and_language": "Region och språk",

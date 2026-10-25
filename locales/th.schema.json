@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "นับถอยหลัง",
     "404": "404",
     "colors": "จานสี",
     "custom_section": "ส่วนที่กำหนดเอง",
@@ -171,6 +172,9 @@
     "disclosures": "การเปิดเผยข้อมูล"
   },
   "settings": {
+    "countdown_start": "เริ่ม",
+    "countdown_end": "สิ้นสุด",
+    "countdown_lead_days": "จำนวนวันที่แสดงก่อนเริ่ม",
     "alignment": "การจัดตำแหน่ง",
     "autoplay": "เล่นอัตโนมัติ",
     "background": "พื้นหลัง",
@@ -1091,6 +1095,7 @@
     "disclosures": "การเปิดเผยข้อมูล"
   },
   "info": {
+    "countdown_datetime": "รูปแบบ: 2026-11-26 00:00 ตามเขตเวลาของร้านค้า",
     "video_alt_text": "โปรดอธิบายวิดีโอสำหรับผู้ใช้เทคโนโลยีความช่วยเหลือพิเศษ",
     "video_autoplay": "วิดีโอจะถูกปิดเสียงตามค่าเริ่มต้น",
     "video_external": "ใช้ URL ของ YouTube หรือ Vimeo",

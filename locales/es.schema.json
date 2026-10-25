@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Cuenta atrás",
     "404": "404",
     "colors": "Paleta de colores",
     "custom_section": "Sección personalizada",
@@ -171,6 +172,9 @@
     "disclosures": "Divulgaciones"
   },
   "settings": {
+    "countdown_start": "Inicio",
+    "countdown_end": "Fin",
+    "countdown_lead_days": "Días visibles antes del inicio",
     "alignment": "Alineación",
     "autoplay": "Reproducción automática",
     "background": "Fondo",
@@ -1091,6 +1095,7 @@
     "disclosures": "Divulgaciones"
   },
   "info": {
+    "countdown_datetime": "Formato: 2026-11-26 00:00, en la zona horaria de la tienda",
     "carousel_layout_on_mobile": "En dispositivos móviles siempre se usa el carrusel",
     "video_alt_text": "Describe el video para personas usuarias de tecnologías de asistencia",
     "video_autoplay": "Los videos estarán silenciados de forma predeterminada",

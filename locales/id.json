@@ -132,6 +132,10 @@
     "zoom_media": "Perbesar media {{ index }}"
   },
   "content": {
+    "countdown_days": "hari",
+    "countdown_hours": "jam",
+    "countdown_minutes": "mnt",
+    "countdown_seconds": "dtk",
     "reviews": "ulasan",
     "language": "Bahasa",
     "localization_region_and_language": "Wilayah dan bahasa",

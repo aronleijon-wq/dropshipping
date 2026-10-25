@@ -158,6 +158,10 @@
     }
   },
   "content": {
+    "countdown_days": "ימים",
+    "countdown_hours": "שעות",
+    "countdown_minutes": "דקות",
+    "countdown_seconds": "שניות",
     "cancel": "ביטול",
     "discount": "הנחה",
     "account_title": "חשבון",

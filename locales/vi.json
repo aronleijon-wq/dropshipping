@@ -132,6 +132,10 @@
     "back_to_main_menu": "Quay lại menu chính"
   },
   "content": {
+    "countdown_days": "ngày",
+    "countdown_hours": "giờ",
+    "countdown_minutes": "phút",
+    "countdown_seconds": "giây",
     "reviews": "đánh giá",
     "language": "Ngôn ngữ",
     "localization_region_and_language": "Khu vực và ngôn ngữ",

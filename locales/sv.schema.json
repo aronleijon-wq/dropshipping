@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Nedräkning",
     "404": "404",
     "colors": "Färgpalett",
     "custom_section": "Anpassad sektion",
@@ -171,6 +172,9 @@
     "disclosures": "Upplysningar"
   },
   "settings": {
+    "countdown_start": "Start",
+    "countdown_end": "Slut",
+    "countdown_lead_days": "Dagar som visas före start",
     "alignment": "Justering",
     "autoplay": "Autouppspelning",
     "background": "Bakgrund",
@@ -1091,6 +1095,7 @@
     "disclosures": "Upplysningar"
   },
   "info": {
+    "countdown_datetime": "Format: 2026-11-26 00:00, i butikens tidszon",
     "video_alt_text": "Beskriv videon för användare av hjälpmedelsteknik",
     "video_autoplay": "Videor kommer att vara tystade som standard",
     "video_external": "Använd en URL från YouTube eller Vimeo",

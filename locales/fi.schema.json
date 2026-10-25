@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Lähtölaskenta",
     "404": "404",
     "colors": "Väripaletti",
     "custom_section": "Mukautettu osio",
@@ -171,6 +172,9 @@
     "disclosures": "Ilmoitukset"
   },
   "settings": {
+    "countdown_start": "Alku",
+    "countdown_end": "Loppu",
+    "countdown_lead_days": "Näytetään päivää ennen alkua",
     "alignment": "Tasaus",
     "autoplay": "Automaattinen toisto",
     "background": "Tausta",
@@ -1091,6 +1095,7 @@
     "disclosures": "Ilmoitukset"
   },
   "info": {
+    "countdown_datetime": "Muoto: 2026-11-26 00:00 kaupan aikavyöhykkeellä",
     "carousel_layout_on_mobile": "Mobiilissa käytetään aina karusellia.",
     "video_alt_text": "Kuvaile video avustavan teknologian käyttäjille",
     "video_autoplay": "Videot mykistetään oletusarvoisesti",

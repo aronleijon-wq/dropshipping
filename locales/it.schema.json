@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Conto alla rovescia",
     "404": "404",
     "colors": "Palette colori",
     "custom_section": "Sezione personalizzata",
@@ -171,6 +172,9 @@
     "disclosures": "Informative"
   },
   "settings": {
+    "countdown_start": "Inizio",
+    "countdown_end": "Fine",
+    "countdown_lead_days": "Giorni visibili prima dell'inizio",
     "alignment": "Allineamento",
     "autoplay": "Riproduzione automatica",
     "background": "Sfondo",
@@ -1091,6 +1095,7 @@
     "disclosures": "Informative"
   },
   "info": {
+    "countdown_datetime": "Formato: 2026-11-26 00:00, fuso orario del negozio",
     "carousel_layout_on_mobile": "Sui dispositivi mobili viene sempre utilizzato il carosello.",
     "video_alt_text": "Descrivi il video per gli utenti di tecnologie assistive",
     "video_autoplay": "I video saranno senza audio per impostazione predefinita",

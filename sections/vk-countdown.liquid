@@ -1,0 +1,401 @@
+{% comment %}
+  Section contract.
+  Kampanjrad med nedräkning. Före start räknar den ner till kampanjstart och visar en kort
+  kampanjtext; under kampanjen räknar den ner till slut och visar en köpknapp. Raden syns
+  först ett valt antal dagar före start och döljs efter slut. Tider skrivs som
+  "2026-11-26 00:00" i butikens tidszon (eller med egen offset, t.ex. "+01:00").
+  @example
+  <!-- Läggs i sidhuvudets grupp ovanför annonsraden; tider och texter ställs in i temaredigeraren. -->
+{% endcomment %}
+
+{% liquid
+  assign has_background = false
+  if section.settings.background_color != blank
+    assign has_background = true
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+
+  # Skippa markup helt när kampanjen redan är slut (JS döljer den också vid sidcache)
+  assign show_countdown = true
+  assign end_seconds = section.settings.countdown_end | date: '%s' | plus: 0
+  assign now_seconds = 'now' | date: '%s' | plus: 0
+  if request.design_mode == false and end_seconds > 1000000000 and now_seconds > end_seconds
+    assign show_countdown = false
+  endif
+%}
+
+{%- if show_countdown -%}
+  <script type="module">
+    import { Component } from '@theme/component';
+
+    const DAY = 86400000;
+    const HOUR = 3600000;
+    const MINUTE = 60000;
+
+    /** @extends {Component<{ days: HTMLElement, hours: HTMLElement, minutes: HTMLElement, seconds: HTMLElement }>} */
+    class VkCountdown extends Component {
+      requiredRefs = ['days', 'hours', 'minutes', 'seconds'];
+
+      /** @type {number | undefined} */
+      #interval;
+
+      connectedCallback() {
+        super.connectedCallback();
+        this.#run();
+      }
+
+      updatedCallback() {
+        super.updatedCallback();
+        this.#run();
+      }
+
+      disconnectedCallback() {
+        super.disconnectedCallback();
+        clearInterval(this.#interval);
+      }
+
+      #run() {
+        clearInterval(this.#interval);
+        if (!this.#tick()) return;
+        this.#interval = setInterval(() => {
+          if (!this.#tick()) clearInterval(this.#interval);
+        }, 1000);
+      }
+
+      /** @returns {boolean} true while there is something left to count down to */
+      #tick() {
+        const start = this.#parse(this.dataset.start);
+        const end = this.#parse(this.dataset.end);
+        const lead = Number(this.dataset.leadDays ?? 0) * DAY;
+        const now = Date.now();
+
+        let phase = 'off';
+        let target = 0;
+        if (!Number.isNaN(start) && !Number.isNaN(end)) {
+          if (now < start && (now >= start - lead || this.dataset.designMode != null)) {
+            phase = 'before';
+            target = start;
+          } else if (now >= start && now < end) {
+            phase = 'during';
+            target = end;
+          } else if (now >= end && this.dataset.designMode != null) {
+            phase = 'during';
+            target = end;
+          }
+        }
+
+        this.dataset.phase = phase;
+        this.hidden = phase === 'off';
+        if (phase === 'off') return false;
+
+        const left = Math.max(0, target - now);
+        this.refs.days.textContent = String(Math.floor(left / DAY));
+        this.refs.hours.textContent = this.#pad(Math.floor((left % DAY) / HOUR));
+        this.refs.minutes.textContent = this.#pad(Math.floor((left % HOUR) / MINUTE));
+        this.refs.seconds.textContent = this.#pad(Math.floor((left % MINUTE) / 1000));
+        return true;
+      }
+
+      /** @param {number} value */
+      #pad(value) {
+        return String(value).padStart(2, '0');
+      }
+
+      /**
+       * Läser "2026-11-26 00:00" i butikens tidszon, eller ISO-tid med egen offset.
+       * @param {string | undefined} value
+       */
+      #parse(value) {
+        if (!value) return NaN;
+        let iso = value.trim().replace(' ', 'T');
+        if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) iso += 'T00:00';
+        if (/T\d{2}:\d{2}$/.test(iso)) iso += ':00';
+        if (!/(Z|[+-]\d{2}:?\d{2})$/.test(iso)) {
+          const zone = (this.dataset.zone ?? '').match(/^([+-]\d{2}):?(\d{2})$/);
+          iso += zone ? `${zone[1]}:${zone[2]}` : 'Z';
+        }
+        return Date.parse(iso);
+      }
+    }
+
+    if (!customElements.get('vk-countdown-component')) {
+      customElements.define('vk-countdown-component', VkCountdown);
+    }
+  </script>
+
+  <vk-countdown-component
+    class="vk-countdown{% if has_background %} color-custom-{{ section.id }}{% endif %}"
+    data-start="{{ section.settings.countdown_start | escape }}"
+    data-end="{{ section.settings.countdown_end | escape }}"
+    data-lead-days="{{ section.settings.countdown_lead_days }}"
+    data-zone="{{ 'now' | date: '%z' }}"
+    data-phase="before"
+    {% if request.design_mode %}
+      data-design-mode
+    {% endif %}
+    hidden
+  >
+    <div class="vk-countdown__inner">
+      <p class="vk-countdown__label">
+        <span class="vk-countdown__dot" aria-hidden="true"></span>
+        <span class="vk-countdown__before">{{ section.settings.label_before | escape }}</span>
+        <span class="vk-countdown__during">{{ section.settings.label_during | escape }}</span>
+      </p>
+
+      <p class="vk-countdown__clock" role="timer">
+        <span class="vk-countdown__unit">
+          <span class="vk-countdown__value" ref="days">0</span>
+          <span class="vk-countdown__name">{{ 'content.countdown_days' | t }}</span>
+        </span>
+        <span class="vk-countdown__sep" aria-hidden="true">:</span>
+        <span class="vk-countdown__unit">
+          <span class="vk-countdown__value" ref="hours">00</span>
+          <span class="vk-countdown__name">{{ 'content.countdown_hours' | t }}</span>
+        </span>
+        <span class="vk-countdown__sep" aria-hidden="true">:</span>
+        <span class="vk-countdown__unit">
+          <span class="vk-countdown__value" ref="minutes">00</span>
+          <span class="vk-countdown__name">{{ 'content.countdown_minutes' | t }}</span>
+        </span>
+        <span class="vk-countdown__sep" aria-hidden="true">:</span>
+        <span class="vk-countdown__unit">
+          <span class="vk-countdown__value" ref="seconds">00</span>
+          <span class="vk-countdown__name">{{ 'content.countdown_seconds' | t }}</span>
+        </span>
+      </p>
+
+      {%- if section.settings.note_before != blank -%}
+        <p class="vk-countdown__note vk-countdown__before">{{ section.settings.note_before | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        <a class="vk-countdown__cta vk-countdown__during" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+  </vk-countdown-component>
+{%- endif -%}
+
+{% stylesheet %}
+  .vk-countdown {
+    --vk-cd-accent: var(--color-primary-button-background);
+    --vk-cd-on-accent: var(--color-primary-button-text);
+    display: block;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .vk-countdown[hidden] {
+    display: none;
+  }
+
+  .vk-countdown[data-phase='before'] .vk-countdown__during,
+  .vk-countdown[data-phase='during'] .vk-countdown__before {
+    display: none;
+  }
+
+  .vk-countdown__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--page-width, 1400px);
+    margin-inline: auto;
+    padding: 8px 16px;
+    text-align: center;
+  }
+
+  .vk-countdown__label,
+  .vk-countdown__clock,
+  .vk-countdown__note {
+    margin: 0;
+  }
+
+  .vk-countdown__label {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 0;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+  .vk-countdown__dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--vk-cd-accent);
+  }
+
+  .vk-countdown__clock {
+    display: inline-flex;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .vk-countdown__unit {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 2.6em;
+    padding: 3px 6px 2px;
+    border-radius: 6px;
+    background: rgb(var(--color-foreground-rgb) / var(--opacity-10));
+  }
+
+  .vk-countdown__value {
+    font-size: 1rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+
+  .vk-countdown__name {
+    font-size: 0.625rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+  }
+
+  .vk-countdown__sep {
+    padding-block-start: 3px;
+    font-weight: 800;
+    color: var(--vk-cd-accent);
+  }
+
+  .vk-countdown__note {
+    font-size: 0.8125rem;
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+    overflow-wrap: anywhere;
+  }
+
+  .vk-countdown__cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: var(--vk-cd-accent);
+    color: var(--vk-cd-on-accent);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .vk-countdown__cta:focus-visible {
+    outline: 2px solid var(--vk-cd-accent);
+    outline-offset: 2px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .vk-countdown__inner {
+      gap: 6px 12px;
+      padding-block: 8px;
+    }
+
+    .vk-countdown__label {
+      flex-basis: 100%;
+      justify-content: center;
+    }
+
+    .vk-countdown__note {
+      flex-basis: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .vk-countdown__dot {
+      animation: vk-countdown-pulse 1.6s var(--ease-out-cubic, ease-out) infinite;
+    }
+
+    @keyframes vk-countdown-pulse {
+      0% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--vk-cd-accent) 70%, transparent);
+      }
+
+      100% {
+        box-shadow: 0 0 0 8px color-mix(in srgb, var(--vk-cd-accent) 0%, transparent);
+      }
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.countdown",
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "countdown_start",
+      "label": "t:settings.countdown_start",
+      "info": "t:info.countdown_datetime",
+      "default": "2026-11-26 00:00"
+    },
+    {
+      "type": "text",
+      "id": "countdown_end",
+      "label": "t:settings.countdown_end",
+      "info": "t:info.countdown_datetime",
+      "default": "2026-11-30 23:59"
+    },
+    {
+      "type": "range",
+      "id": "countdown_lead_days",
+      "label": "t:settings.countdown_lead_days",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "text",
+      "id": "label_before",
+      "label": "t:settings.text",
+      "default": "Black Week startar om"
+    },
+    {
+      "type": "text",
+      "id": "note_before",
+      "label": "t:settings.text",
+      "default": "26–30 nov · −30 % på SleepWell"
+    },
+    {
+      "type": "text",
+      "id": "label_during",
+      "label": "t:settings.text",
+      "default": "Black Week −30 % · slutar om"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:settings.label",
+      "default": "Handla nu"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:settings.link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#0E1220"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.countdown"
+    }
+  ]
+}
+{% endschema %}

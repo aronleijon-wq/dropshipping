@@ -136,6 +136,10 @@
     "back_to_main_menu": "Atgal į pagrindinį meniu"
   },
   "content": {
+    "countdown_days": "d.",
+    "countdown_hours": "val.",
+    "countdown_minutes": "min.",
+    "countdown_seconds": "sek.",
     "reviews": "apžvalgos (-ų; -a)",
     "language": "Kalba",
     "localization_region_and_language": "Regionas ir kalba",

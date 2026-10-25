@@ -132,6 +132,10 @@
     "back_to_main_menu": "Επιστροφή στο κύριο μενού"
   },
   "content": {
+    "countdown_days": "ημέρες",
+    "countdown_hours": "ώρες",
+    "countdown_minutes": "λεπ",
+    "countdown_seconds": "δευτ",
     "reviews": "κριτικές",
     "no_results_found": "Δεν βρέθηκαν αποτελέσματα",
     "language": "Γλώσσα",

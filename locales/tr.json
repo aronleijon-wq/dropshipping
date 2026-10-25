@@ -132,6 +132,10 @@
     "zoom_media": "Medyayı yakınlaştır: {{ index }}"
   },
   "content": {
+    "countdown_days": "gün",
+    "countdown_hours": "sa",
+    "countdown_minutes": "dk",
+    "countdown_seconds": "sn",
     "reviews": "değerlendirme",
     "language": "Dil",
     "localization_region_and_language": "Bölge ve dil",

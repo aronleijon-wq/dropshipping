@@ -132,6 +132,10 @@
     "back_to_main_menu": "Takaisin päävalikkoon"
   },
   "content": {
+    "countdown_days": "päivää",
+    "countdown_hours": "t",
+    "countdown_minutes": "min",
+    "countdown_seconds": "s",
     "reviews": "arvostelua",
     "language": "Kieli",
     "localization_region_and_language": "Alue ja kieli",

@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Contagem regressiva",
     "404": "404",
     "colors": "Paleta de cores",
     "custom_section": "Seção personalizada",
@@ -171,6 +172,9 @@
     "disclosures": "Divulgações"
   },
   "settings": {
+    "countdown_start": "Início",
+    "countdown_end": "Fim",
+    "countdown_lead_days": "Dias exibidos antes do início",
     "alignment": "Alinhamento",
     "autoplay": "Reprodução automática",
     "background": "Plano de fundo",
@@ -1091,6 +1095,7 @@
     "disclosures": "Divulgações"
   },
   "info": {
+    "countdown_datetime": "Formato: 2026-11-26 00:00, no fuso horário da loja",
     "video_alt_text": "Descreva o vídeo para usuários de tecnologia assistiva",
     "video_autoplay": "Os vídeos ficarão sem som por padrão",
     "video_external": "Use um URL do YouTube ou do Vimeo",

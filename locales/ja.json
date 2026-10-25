@@ -132,6 +132,10 @@
     "back_to_main_menu": "メインメニューに戻る"
   },
   "content": {
+    "countdown_days": "日",
+    "countdown_hours": "時間",
+    "countdown_minutes": "分",
+    "countdown_seconds": "秒",
     "reviews": "レビュー",
     "language": "言語",
     "localization_region_and_language": "地域と言語",

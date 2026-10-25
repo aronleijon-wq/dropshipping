@@ -132,6 +132,10 @@
     "zoom_media": "{{ index }} 미디어 확대/축소"
   },
   "content": {
+    "countdown_days": "일",
+    "countdown_hours": "시간",
+    "countdown_minutes": "분",
+    "countdown_seconds": "초",
     "reviews": "리뷰",
     "language": "언어",
     "localization_region_and_language": "지역 및 언어",

@@ -134,6 +134,10 @@
     "back_to_main_menu": "Torna al menu principale"
   },
   "content": {
+    "countdown_days": "giorni",
+    "countdown_hours": "ore",
+    "countdown_minutes": "min",
+    "countdown_seconds": "sec",
     "reviews": "recensioni",
     "no_results_found": "Nessun risultato trovato",
     "language": "Lingua",

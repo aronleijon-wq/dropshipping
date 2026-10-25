@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "countdown": "Geri sayım",
     "404": "404",
     "custom_section": "Özel bölüm",
     "icon": "Simge",
@@ -171,6 +172,9 @@
     "disclosures": "Bildirimler"
   },
   "settings": {
+    "countdown_start": "Başlangıç",
+    "countdown_end": "Bitiş",
+    "countdown_lead_days": "Başlangıçtan önce gösterilecek gün",
     "autoplay": "Otomatik oynatma",
     "background": "Arka plan",
     "border_radius": "Köşe yarıçapı",
@@ -1091,6 +1095,7 @@
     "disclosures": "Bildirimler"
   },
   "info": {
+    "countdown_datetime": "Biçim: 2026-11-26 00:00, mağaza saat diliminde",
     "video_alt_text": "Yardımcı teknoloji kullanıcıları için videoyu açıklayın",
     "video_autoplay": "Videolar varsayılan olarak sessize alınır",
     "video_external": "Bir YouTube veya Vimeo URL'si kullanın",

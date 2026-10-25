@@ -132,6 +132,10 @@
     "back_to_main_menu": "Назад към главното меню"
   },
   "content": {
+    "countdown_days": "дни",
+    "countdown_hours": "ч",
+    "countdown_minutes": "мин",
+    "countdown_seconds": "сек",
     "reviews": "мнения",
     "language": "Език",
     "localization_region_and_language": "Регион и език",
