@@ -129,7 +129,7 @@
             "b": {
               "type": "button",
               "settings": {
-                "label": "Köp nu – 399 KR",
+                "label": "Köp nu – 449 KR",
                 "link": "shopify://products/vakn-sportklocka-med-vackarlarm",
                 "open_in_new_tab": false,
                 "style_class": "button",
@@ -3975,7 +3975,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>399 kr · Fri frakt · 30 dagars öppet köp</p>",
+            "text": "<p>449 kr · Fri frakt · 30 dagars öppet köp</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
