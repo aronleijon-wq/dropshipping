@@ -2,6 +2,8 @@
   Mängdrabattrutor (1/2/3 st) för produktformuläret. Priserna räknas från produktens pris
   och motsvarar de automatiska rabatterna (2 st −20 %, 3 st −30 %), avrundat uppåt till hela kronor. Klick sätter antalet i
   Horizons quantity-selector-component i samma sektion.
+  Kampanjläge när produkten har ett jämförpris över priset: rutorna visar kampanjrabatten (avrundad nedåt) plus
+  paketrabatten som extra, och stryker paketets ordinarie pris (jämförpris × antal med paketrabatt).
 
   @param {object} [product] - Produkten. Faller tillbaka på closest.product.
 
@@ -15,26 +17,39 @@
 {%- assign t3 = p | times: 21 | divided_by: 10 | plus: 99 | divided_by: 100 | times: 100 -%}
 {%- assign u2 = t2 | divided_by: 2 | plus: 99 | divided_by: 100 | times: 100 -%}
 {%- assign u3 = t3 | divided_by: 3 | plus: 99 | divided_by: 100 | times: 100 -%}
-{%- assign s2 = p | times: 2 | minus: t2 -%}
-{%- assign s3 = p | times: 3 | minus: t3 -%}
+{%- assign cp = prod.compare_at_price | default: 0 -%}
+{%- assign c2 = p | times: 2 -%}
+{%- assign c3 = p | times: 3 -%}
+{%- assign campaign = false -%}
+{%- if cp > p -%}
+  {%- assign campaign = true -%}
+  {%- comment -%} Kampanjrabatt avrundad nedåt, så att procenten aldrig överdrivs {%- endcomment -%}
+  {%- assign pct = cp | minus: p | times: 100 | divided_by: cp -%}
+  {%- comment -%} Paketets ordinarie pris (det kunden betalade före kampanjen), avrundat nedåt så att besparingen aldrig överdrivs {%- endcomment -%}
+  {%- assign c2 = cp | times: 16 | divided_by: 10 | divided_by: 100 | times: 100 -%}
+  {%- assign c3 = cp | times: 21 | divided_by: 10 | divided_by: 100 | times: 100 -%}
+{%- endif -%}
+{%- assign s2 = c2 | minus: t2 -%}
+{%- assign s3 = c3 | minus: t3 -%}
 <div class="vk-bundle">
-  <div class="vk-b-title">Köp fler – spara mer</div>
+  <div class="vk-b-title">{% if campaign %}Black Week – köp fler, spara mer{% else %}Köp fler – spara mer{% endif %}</div>
   <button type="button" class="vk-tier is-on" data-qty="1" aria-pressed="true">
+    {%- if campaign -%}<span class="vk-tag vk-tag2">−{{ pct }} %</span>{%- endif -%}
     <span class="vk-r"></span>
-    <span class="vk-l"><strong>1 st</strong><small>Ordinarie pris</small></span>
-    <span class="vk-p"><strong>{{ p | money_without_trailing_zeros }}</strong></span>
+    <span class="vk-l"><strong>1 st</strong><small>{% if campaign %}Kampanjpris{% else %}Ordinarie pris{% endif %}</small></span>
+    <span class="vk-p"><strong>{{ p | money_without_trailing_zeros }}</strong>{% if campaign %}<s>{{ cp | money_without_trailing_zeros }}</s>{% endif %}</span>
   </button>
   <button type="button" class="vk-tier" data-qty="2" aria-pressed="false">
-    <span class="vk-tag vk-tag2">SPARA 20 %</span>
+    <span class="vk-tag vk-tag2">{% if campaign %}−{{ pct }} % + EXTRA 20 %{% else %}SPARA 20 %{% endif %}</span>
     <span class="vk-r"></span>
     <span class="vk-l"><strong>2 st</strong><small>{{ u2 | money_without_trailing_zeros }}/st · spara {{ s2 | money_without_trailing_zeros }}</small></span>
-    <span class="vk-p"><strong>{{ t2 | money_without_trailing_zeros }}</strong><s>{{ p | times: 2 | money_without_trailing_zeros }}</s></span>
+    <span class="vk-p"><strong>{{ t2 | money_without_trailing_zeros }}</strong><s>{{ c2 | money_without_trailing_zeros }}</s></span>
   </button>
   <button type="button" class="vk-tier vk-tier--best" data-qty="3" aria-pressed="false">
-    <span class="vk-tag">★ BÄSTA KÖPET · SPARA 30 %</span>
+    <span class="vk-tag">★ BÄSTA KÖPET · {% if campaign %}−{{ pct }} % + EXTRA 30 %{% else %}SPARA 30 %{% endif %}</span>
     <span class="vk-r"></span>
     <span class="vk-l"><strong>3 st</strong><small>{{ u3 | money_without_trailing_zeros }}/st</small><em class="vk-save">Du sparar {{ s3 | money_without_trailing_zeros }}</em></span>
-    <span class="vk-p"><strong>{{ t3 | money_without_trailing_zeros }}</strong><s>{{ p | times: 3 | money_without_trailing_zeros }}</s></span>
+    <span class="vk-p"><strong>{{ t3 | money_without_trailing_zeros }}</strong><s>{{ c3 | money_without_trailing_zeros }}</s></span>
   </button>
   <div class="vk-b-note">Rabatten dras automatiskt i kassan. Blanda gärna färger.</div>
 </div>
