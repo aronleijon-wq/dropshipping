@@ -514,7 +514,8 @@
         "padding-block-start": 12,
         "padding-block-end": 12,
         "gap_between_elements": 14
-      }
+      },
+      "disabled": true
     },
     "fakta": {
       "type": "section",
@@ -653,7 +654,8 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 72
-      }
+      },
+      "disabled": true
     },
     "who": {
       "type": "section",
@@ -1124,7 +1126,8 @@
         "border_radius": 0,
         "padding-block-start": 64,
         "padding-block-end": 64
-      }
+      },
+      "disabled": true
     },
     "jamfor": {
       "type": "section",
@@ -1421,7 +1424,8 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 72
-      }
+      },
+      "disabled": true
     },
     "produkt": {
       "type": "featured-product-information",
@@ -2023,7 +2027,8 @@
         "background_color": "#f2f4f7",
         "padding-block-start": 56,
         "padding-block-end": 56
-      }
+      },
+      "disabled": true
     },
     "specs": {
       "type": "section",
@@ -3106,7 +3111,8 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 72
-      }
+      },
+      "disabled": true
     },
     "steg": {
       "type": "section",
@@ -3577,7 +3583,8 @@
         "border_radius": 0,
         "padding-block-start": 64,
         "padding-block-end": 64
-      }
+      },
+      "disabled": true
     },
     "faq": {
       "type": "section",
@@ -3943,7 +3950,8 @@
         "border_radius": 0,
         "padding-block-start": 64,
         "padding-block-end": 64
-      }
+      },
+      "disabled": true
     },
     "cta": {
       "type": "section",
@@ -4676,7 +4684,8 @@
         "background_color": "#ffffff",
         "padding-block-start": 56,
         "padding-block-end": 56
-      }
+      },
+      "disabled": true
     },
     "produkter": {
       "type": "product-list",
@@ -4863,7 +4872,8 @@
         "background_color": "#ffffff",
         "padding-block-start": 56,
         "padding-block-end": 56
-      }
+      },
+      "disabled": true
     }
   },
   "order": [
