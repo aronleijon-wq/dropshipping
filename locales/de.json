@@ -170,6 +170,7 @@
     "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet.",
     "taxes_included": "Inkl. Steuern.",
     "product_badge_sold_out": "Ausverkauft",
+    "product_badge_bundle": "3 kaufen – 30 % sparen",
     "product_badge_sale": "Sale",
     "search_input_label": "Suchen",
     "search_input_placeholder": "Suchen",

@@ -171,6 +171,7 @@
     "shipping_policy_html": "<a href=\"{{ link }}\">Expédition</a> calculée lors du paiement.",
     "taxes_included": "Taxes incluses.",
     "product_badge_sold_out": "Épuisé",
+    "product_badge_bundle": "Achetez-en 3 – économisez 30 %",
     "product_badge_sale": "Promotion",
     "grid_view": {
       "default_view": "Par défaut",

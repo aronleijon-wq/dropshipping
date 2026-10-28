@@ -170,6 +170,7 @@
     "shipping_policy_html": "Τα <a href=\"{{ link }}\">έξοδα αποστολής</a> υπολογίζονται κατά την ολοκλήρωση της αγοράς.",
     "taxes_included": "Οι φόροι συμπεριλαμβάνονται.",
     "product_badge_sold_out": "Εξαντλήθηκε",
+    "product_badge_bundle": "Αγοράστε 3 – εξοικονομήστε 30%",
     "product_badge_sale": "Έκπτωση",
     "search_input_label": "Αναζήτηση",
     "search_input_placeholder": "Αναζήτηση",

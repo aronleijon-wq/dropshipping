@@ -170,6 +170,7 @@
     "shipping_policy_html": "<a href=\"{{ link }}\">配送料</a>はチェックアウト時に計算されます。",
     "taxes_included": "税込。",
     "product_badge_sold_out": "売り切れ",
+    "product_badge_bundle": "3点購入で30%オフ",
     "product_badge_sale": "セール",
     "search_input_label": "検索",
     "search_input_placeholder": "検索",

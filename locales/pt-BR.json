@@ -172,6 +172,7 @@
     "shipping_policy_html": "<a href=\"{{ link }}\">Frete</a> calculado no checkout.",
     "taxes_included": "Tributos incluídos.",
     "product_badge_sold_out": "Esgotado",
+    "product_badge_bundle": "Compre 3 e economize 30%",
     "product_badge_sale": "Promoção",
     "search_input_label": "Pesquisa",
     "search_input_placeholder": "Pesquisa",

@@ -170,6 +170,7 @@
     "shipping_policy_html": "结账时计算的<a href=\"{{ link }}\">运费</a>。",
     "taxes_included": "已含税费。",
     "product_badge_sold_out": "售罄",
+    "product_badge_bundle": "买 3 件省 30%",
     "product_badge_sale": "促销",
     "grid_view": {
       "default_view": "默认",

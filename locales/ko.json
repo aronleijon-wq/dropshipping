@@ -170,6 +170,7 @@
     "shipping_policy_html": "<a href=\"{{ link }}\">배송료</a>는 결제 시 계산됩니다.",
     "taxes_included": "세금이 포함된 가격입니다.",
     "product_badge_sold_out": "품절",
+    "product_badge_bundle": "3개 구매 시 30% 할인",
     "product_badge_sale": "판매",
     "search_input_label": "검색",
     "search_input_placeholder": "검색",
