@@ -222,8 +222,7 @@
               "settings": {
                 "custom_liquid": "{% render 'vakn-bundle', product: closest.product %}"
               },
-              "blocks": {},
-              "disabled": true
+              "blocks": {}
             },
             "buy_buttons": {
               "type": "buy-buttons",
@@ -794,7 +793,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>349 kr · Fri frakt · 30 dagars öppet köp</p>",
+            "text": "<p>229 kr · Fri frakt · 3 läslampor för 481 kr – bara 160 kr/st</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",

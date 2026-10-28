@@ -221,8 +221,7 @@
               "settings": {
                 "custom_liquid": "{% render 'vakn-bundle', product: closest.product %}"
               },
-              "blocks": {},
-              "disabled": true
+              "blocks": {}
             },
             "buy_buttons": {
               "type": "buy-buttons",
@@ -793,7 +792,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>499 kr · Fri frakt · 30 dagars öppet köp</p>",
+            "text": "<p>349 kr · Fri frakt · 2 st spara 20 % · 3 st spara 30 %</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
