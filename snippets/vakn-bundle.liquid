@@ -36,6 +36,49 @@
 {%- endif -%}
 {%- assign s2 = c2 | minus: t2 -%}
 {%- assign s3 = c3 | minus: t3 -%}
+{%- if prod.id == 16147101581642 -%}
+  {%- comment -%}
+    Läslampan: exakta öresummor. Ytterligare 20 %/30 % räknas på styckpriset. Med jämförpris
+    stryks paketets tidigare pris över (jämförpris × antal med samma paketrabatt), alltså det
+    kunden faktiskt betalade för paketet innan.
+  {%- endcomment -%}
+  {%- assign lt2 = p | times: 16 | plus: 5 | divided_by: 10 -%}
+  {%- assign lt3 = p | times: 21 | plus: 5 | divided_by: 10 -%}
+  {%- assign lu2 = lt2 | plus: 1 | divided_by: 2 -%}
+  {%- assign lu3 = lt3 | plus: 1 | divided_by: 3 -%}
+  {%- assign lb = p -%}
+  {%- if campaign -%}{%- assign lb = cp -%}{%- endif -%}
+  {%- assign lc2 = lb | times: 16 | plus: 5 | divided_by: 10 -%}
+  {%- assign lc3 = lb | times: 21 | plus: 5 | divided_by: 10 -%}
+  {%- unless campaign -%}
+    {%- assign lc2 = p | times: 2 -%}
+    {%- assign lc3 = p | times: 3 -%}
+  {%- endunless -%}
+  {%- assign ls2 = lc2 | minus: lt2 -%}
+  {%- assign ls3 = lc3 | minus: lt3 -%}
+  <div class="vk-bundle">
+    <div class="vk-b-title">Köp fler – spara mer</div>
+    <button type="button" class="vk-tier is-on" data-qty="1" aria-pressed="true">
+      {%- if campaign -%}<span class="vk-tag vk-tag2">−{{ pct }} %</span>{%- endif -%}
+      <span class="vk-r"></span>
+      <span class="vk-l"><strong>1 st</strong><small>{% if campaign %}Kampanjpris{% else %}Styckpris{% endif %}</small></span>
+      <span class="vk-p"><strong>{{ p | money_without_trailing_zeros }}</strong>{% if campaign %}<s>{{ cp | money_without_trailing_zeros }}</s>{% endif %}</span>
+    </button>
+    <button type="button" class="vk-tier" data-qty="2" aria-pressed="false">
+      <span class="vk-tag vk-tag2">YTTERLIGARE 20 % RABATT</span>
+      <span class="vk-r"></span>
+      <span class="vk-l"><strong>2 st</strong><small>{{ lu2 | money_without_trailing_zeros }}/st · spara {{ ls2 | money_without_trailing_zeros }}</small></span>
+      <span class="vk-p"><strong>{{ lt2 | money_without_trailing_zeros }}</strong><s>{{ lc2 | money_without_trailing_zeros }}</s></span>
+    </button>
+    <button type="button" class="vk-tier vk-tier--best" data-qty="3" aria-pressed="false">
+      <span class="vk-tag">★ BÄSTA KÖPET · YTTERLIGARE 30 % RABATT</span>
+      <span class="vk-r"></span>
+      <span class="vk-l"><strong>3 st</strong><small>{{ lu3 | money_without_trailing_zeros }}/st</small><em class="vk-save">Du sparar {{ ls3 | money_without_trailing_zeros }}</em></span>
+      <span class="vk-p"><strong>{{ lt3 | money_without_trailing_zeros }}</strong><s>{{ lc3 | money_without_trailing_zeros }}</s></span>
+    </button>
+    <div class="vk-b-note">Paketpriserna inkluderar ytterligare 20 % rabatt vid köp av 2 st och 30 % vid köp av 3 st. Rabatten dras automatiskt i kassan.</div>
+  </div>
+{%- else -%}
 <div class="vk-bundle">
   <div class="vk-b-title">{% if campaign %}Black Week – köp fler, spara mer{% else %}Köp fler – spara mer{% endif %}</div>
   <button type="button" class="vk-tier is-on" data-qty="1" aria-pressed="true">
@@ -58,6 +101,7 @@
   </button>
   <div class="vk-b-note">Rabatten dras automatiskt i kassan. Blanda gärna färger.</div>
 </div>
+{%- endif -%}
 <script>
 (function(){
   if(window.__vkB)return;window.__vkB=1;
