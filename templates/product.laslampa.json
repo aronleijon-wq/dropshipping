@@ -856,27 +856,29 @@
         "clip1": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/IMG-0428.MP4",
+            "video": "shopify://files/videos/sleepwell_laslampa_1.mp4",
             "caption": ""
           }
         },
         "clip2": {
           "type": "clip",
           "settings": {
-            "video": "shopify://files/videos/IMG-0432.MP4",
+            "video": "shopify://files/videos/sleepwell_laslampa_2.mp4",
             "caption": ""
           }
         },
         "clip3": {
           "type": "clip",
           "settings": {
-            "caption": ""
+            "caption": "",
+            "video": "shopify://files/videos/sleepwell_laslampa_3.mp4"
           }
         },
         "clip4": {
           "type": "clip",
           "settings": {
-            "caption": ""
+            "caption": "",
+            "video": ""
           }
         }
       },
@@ -887,13 +889,12 @@
         "clip4"
       ],
       "settings": {
-        "heading": "SleepWell i användning",
-        "text": "Tyst vibration på armen – se hur det funkar.",
+        "heading": "Läslampan i användning",
+        "text": "Ljuset på boken – inte i rummet.",
         "background_color": "",
         "padding-block-start": 56,
         "padding-block-end": 56
-      },
-      "disabled": true
+      }
     }
   },
   "order": [
