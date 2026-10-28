@@ -18,74 +18,11 @@
         "countdown_end": "2026-11-30 23:59",
         "countdown_lead_days": 32,
         "label_before": "Black Week startar om",
-        "note_before": "28–30 nov · Upp till −54 % · 3 läslampor för 481 kr",
-        "label_during": "Rea · 3 läslampor för 481 kr – bara 160 kr/st · slutar om",
+        "note_before": "Köp 2 – spara 20 % · Köp 3 – spara 30 %",
+        "label_during": "Black Week · Köp 3 – spara 30 % · slutar om",
         "button_label": "Handla nu",
         "button_link": "shopify://products/vakn-sportklocka-med-vackarlarm",
-        "background_color": "#0E1220"
-      }
-    },
-    "ann": {
-      "type": "header-announcements",
-      "blocks": {
-        "a0": {
-          "type": "_announcement",
-          "settings": {
-            "text": "🔥 Köp 2 – spara 20 % · Köp 3 – spara 30 %",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "a1": {
-          "type": "_announcement",
-          "settings": {
-            "text": "⏰ Väckarklocka på armen – mobilen kan sova ute",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "a2": {
-          "type": "_announcement",
-          "settings": {
-            "text": "🚚 Fri frakt · Leverans 7–12 arbetsdagar",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "a3": {
-          "type": "_announcement",
-          "settings": {
-            "text": "🔒 Betala tryggt med Klarna, kort eller Apple Pay",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "a0",
-        "a1",
-        "a2",
-        "a3"
-      ],
-      "settings": {
-        "speed": 4,
-        "section_width": "full-width",
-        "background_color": "#FFB547",
-        "divider_width": 0,
-        "padding-block-start": 9,
-        "padding-block-end": 9
+        "background_color": "#0e1220"
       }
     },
     "header_section": {
@@ -107,6 +44,7 @@
           "settings": {
             "menu": "main-menu",
             "background_color": "{{ settings.color_palette.background }}",
+            "text_color": "",
             "type_font_primary_size": "0.875rem",
             "menu_font_style": "inverse",
             "type_font_primary_link": "body",
@@ -116,6 +54,8 @@
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
             "navigation_bar": false,
+            "background_color_navigation_bar": "{{ settings.color_palette.background }}",
+            "text_color_navigation_bar": "",
             "drawer_accordion": false,
             "drawer_accordion_expand_first": false,
             "drawer_dividers": false
@@ -143,27 +83,34 @@
         "enable_sticky_header": "always",
         "divider_width": 0,
         "divider_size": "page-width",
+        "divider_color": "",
         "border_width": 1,
+        "bottom_border_color": "#e4e8ee",
         "actions_display_style": "icon",
         "actions_font_size": "0.875rem",
         "actions_font": "body",
         "actions_text_case": "none",
-        "background_color_top": "#FFFFFF",
+        "background_color_top": "#ffffff",
+        "text_color_top": "",
+        "background_color_bottom": "",
+        "text_color_bottom": "",
         "bubble_style": "default",
+        "bubble_background_color": "",
+        "bubble_text_color": "",
         "enable_transparent_header_home": false,
         "home_inverse_logo": false,
-        "text_color_transparent_home": "#EEF0F7",
+        "text_color_transparent_home": "#eef0f7",
         "enable_transparent_header_product": false,
         "product_inverse_logo": false,
+        "text_color_transparent_product": "",
         "enable_transparent_header_collection": false,
         "collection_inverse_logo": false,
-        "bottom_border_color": "#E4E8EE"
+        "text_color_transparent_collection": ""
       }
     }
   },
   "order": [
     "bw_timer",
-    "ann",
     "header_section"
   ]
 }

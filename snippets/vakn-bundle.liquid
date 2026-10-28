@@ -13,11 +13,11 @@
 {% enddoc %}
 {%- assign prod = product | default: closest.product -%}
 {%- assign p = prod.price -%}
-{%- comment -%} Avrundas uppåt till hela kronor; kassans procentrabatt blir aldrig dyrare än det som visas. {%- endcomment -%}
-{%- assign t2 = p | times: 16 | divided_by: 10 | plus: 99 | divided_by: 100 | times: 100 -%}
-{%- assign t3 = p | times: 21 | divided_by: 10 | plus: 99 | divided_by: 100 | times: 100 -%}
-{%- assign u2 = t2 | divided_by: 2 | plus: 99 | divided_by: 100 | times: 100 -%}
-{%- assign u3 = t3 | divided_by: 3 | plus: 99 | divided_by: 100 | times: 100 -%}
+{%- comment -%} Exakta belopp i öre, avrundade till närmaste öre som kassans procentrabatt (2 st −20 %, 3 st −30 %). {%- endcomment -%}
+{%- assign t2 = p | times: 16 | plus: 5 | divided_by: 10 -%}
+{%- assign t3 = p | times: 21 | plus: 5 | divided_by: 10 -%}
+{%- assign u2 = t2 | plus: 1 | divided_by: 2 -%}
+{%- assign u3 = t3 | plus: 1 | divided_by: 3 -%}
 {%- assign cp = prod.compare_at_price | default: 0 -%}
 {%- assign campaign = false -%}
 {%- if cp > p -%}

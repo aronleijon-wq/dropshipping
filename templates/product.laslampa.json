@@ -196,6 +196,7 @@
             },
             "variant_picker": {
               "type": "variant-picker",
+              "disabled": true,
               "settings": {
                 "variant_style": "buttons",
                 "show_swatches": true,
@@ -214,8 +215,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {},
-              "disabled": true
+              "blocks": {}
             },
             "bundle": {
               "type": "custom-liquid",
@@ -762,6 +762,51 @@
         "padding-block-end": 24
       }
     },
+    "reel": {
+      "type": "vk-video-reel",
+      "blocks": {
+        "clip1": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/sleepwell_laslampa_1.mp4",
+            "caption": ""
+          }
+        },
+        "clip2": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/sleepwell_laslampa_2.mp4",
+            "caption": ""
+          }
+        },
+        "clip3": {
+          "type": "clip",
+          "settings": {
+            "video": "shopify://files/videos/sleepwell_laslampa_3.mp4",
+            "caption": ""
+          }
+        },
+        "clip4": {
+          "type": "clip",
+          "settings": {
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "clip1",
+        "clip2",
+        "clip3",
+        "clip4"
+      ],
+      "settings": {
+        "heading": "Läslampan i användning",
+        "text": "Ljuset på boken – inte i rummet.",
+        "background_color": "",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
     "cta": {
       "type": "section",
       "blocks": {
@@ -793,7 +838,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>229 kr · Fri frakt · 3 läslampor för 481 kr – bara 160 kr/st</p>",
+            "text": "<p>329 kr · Fri frakt · 2 st 526,40 kr · 3 st 690,90 kr</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -847,52 +892,6 @@
         "border_radius": 0,
         "padding-block-start": 64,
         "padding-block-end": 64
-      }
-    },
-    "reel": {
-      "type": "vk-video-reel",
-      "blocks": {
-        "clip1": {
-          "type": "clip",
-          "settings": {
-            "video": "shopify://files/videos/sleepwell_laslampa_1.mp4",
-            "caption": ""
-          }
-        },
-        "clip2": {
-          "type": "clip",
-          "settings": {
-            "video": "shopify://files/videos/sleepwell_laslampa_2.mp4",
-            "caption": ""
-          }
-        },
-        "clip3": {
-          "type": "clip",
-          "settings": {
-            "caption": "",
-            "video": "shopify://files/videos/sleepwell_laslampa_3.mp4"
-          }
-        },
-        "clip4": {
-          "type": "clip",
-          "settings": {
-            "caption": "",
-            "video": ""
-          }
-        }
-      },
-      "block_order": [
-        "clip1",
-        "clip2",
-        "clip3",
-        "clip4"
-      ],
-      "settings": {
-        "heading": "Läslampan i användning",
-        "text": "Ljuset på boken – inte i rummet.",
-        "background_color": "",
-        "padding-block-start": 56,
-        "padding-block-end": 56
       }
     }
   },
