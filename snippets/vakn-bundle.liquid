@@ -13,11 +13,11 @@
 {% enddoc %}
 {%- assign prod = product | default: closest.product -%}
 {%- assign p = prod.price -%}
-{%- comment -%} Exakta belopp i öre, avrundade till närmaste öre som kassans procentrabatt (2 st −20 %, 3 st −30 %). {%- endcomment -%}
-{%- assign t2 = p | times: 16 | plus: 5 | divided_by: 10 -%}
-{%- assign t3 = p | times: 21 | plus: 5 | divided_by: 10 -%}
-{%- assign u2 = t2 | plus: 1 | divided_by: 2 -%}
-{%- assign u3 = t3 | plus: 1 | divided_by: 3 -%}
+{%- comment -%} Avrundas uppåt till hela kronor; kassans procentrabatt blir aldrig dyrare än det som visas. {%- endcomment -%}
+{%- assign t2 = p | times: 16 | divided_by: 10 | plus: 99 | divided_by: 100 | times: 100 -%}
+{%- assign t3 = p | times: 21 | divided_by: 10 | plus: 99 | divided_by: 100 | times: 100 -%}
+{%- assign u2 = t2 | divided_by: 2 | plus: 99 | divided_by: 100 | times: 100 -%}
+{%- assign u3 = t3 | divided_by: 3 | plus: 99 | divided_by: 100 | times: 100 -%}
 {%- assign cp = prod.compare_at_price | default: 0 -%}
 {%- assign campaign = false -%}
 {%- if cp > p -%}
@@ -41,7 +41,7 @@
   <button type="button" class="vk-tier is-on" data-qty="1" aria-pressed="true">
     {%- if campaign -%}<span class="vk-tag vk-tag2">−{{ pct }} %</span>{%- endif -%}
     <span class="vk-r"></span>
-    <span class="vk-l"><strong>1 st</strong><small>{% if campaign %}Kampanjpris{% else %}Fri frakt{% endif %}</small></span>
+    <span class="vk-l"><strong>1 st</strong><small>{% if campaign %}Kampanjpris{% else %}Ordinarie pris{% endif %}</small></span>
     <span class="vk-p"><strong>{{ p | money_without_trailing_zeros }}</strong>{% if campaign %}<s>{{ cp | money_without_trailing_zeros }}</s>{% endif %}</span>
   </button>
   <button type="button" class="vk-tier" data-qty="2" aria-pressed="false">
