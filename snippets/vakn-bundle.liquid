@@ -41,7 +41,7 @@
   <button type="button" class="vk-tier is-on" data-qty="1" aria-pressed="true">
     {%- if campaign -%}<span class="vk-tag vk-tag2">−{{ pct }} %</span>{%- endif -%}
     <span class="vk-r"></span>
-    <span class="vk-l"><strong>1 st</strong><small>{% if campaign %}Kampanjpris{% else %}Ordinarie pris{% endif %}</small></span>
+    <span class="vk-l"><strong>1 st</strong><small>{% if campaign %}Kampanjpris{% else %}Fri frakt{% endif %}</small></span>
     <span class="vk-p"><strong>{{ p | money_without_trailing_zeros }}</strong>{% if campaign %}<s>{{ cp | money_without_trailing_zeros }}</s>{% endif %}</span>
   </button>
   <button type="button" class="vk-tier" data-qty="2" aria-pressed="false">

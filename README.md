@@ -6,7 +6,7 @@ Temat i repot motsvarar:
 - Live och utkast växlar: det tema som är opublicerat får nya ändringar och publiceras sedan.
 - Live (2026-10-14): "SleepWell – video" (id 209715069258). Nytt utkast med ny startsida (vk-hero) och SLUTSÅLD-etikett:
   "SleepWell – ny startsida" (id 209762189642), kopierat från live 2026-10-14. Äldre teman är inte i synk.
-- Pris 28 okt 2026 kl. 21:14 och framåt: rea utan jämförpriser. Armband 349 kr (tidigare 299 → 399 23 okt → 449/499 25 okt), läslampa 229 kr (249/349/229/349 samma dag 28 okt). Paketrabatter på: 2 st −20 %, 3 st −30 % (3 läslampor 481 kr). Inga överstrukna priser tills respektive pris legat 30 dagar.
+- Pris 28 okt 2026 kl. 21:14 och framåt: rea utan jämförpriser. Armband 329 kr från 28 okt kväll (349 och 299 kr kort samma kväll; tidigare 299 → 399 23 okt → 449/499 25 okt), läslampa 229 kr (249/349/229/349 samma dag 28 okt). Paketrabatter på: 2 st −20 %, 3 st −30 % (3 läslampor 481 kr). Inga överstrukna priser tills respektive pris legat 30 dagar.
 - Inköp: armband ca $20 (≈210 kr)/st; läslampa 38,84 kr + frakt 18,68 kr (under 100 kr) + import ca 69 kr per paket.
   Kontrollera med Admin API (themes { role }) vilket som är MAIN innan uppladdning.
 
