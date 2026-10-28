@@ -3951,7 +3951,7 @@
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Ge dem koll på morgonen.</h2>",
+            "text": "<h2>Sov gott – utan att väcka någon.</h2>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
@@ -3976,7 +3976,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>499 kr · Fri frakt · 30 dagars öppet köp</p>",
+            "text": "<p>Fri frakt · 30 dagars öppet köp · Köp 2 – spara 20 %</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -4001,8 +4001,8 @@
         "b": {
           "type": "button",
           "settings": {
-            "label": "Köp SleepWell →",
-            "link": "shopify://products/vakn-sportklocka-med-vackarlarm",
+            "label": "Se produkterna →",
+            "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-secondary",
             "custom_button_background": "{{ settings.color_palette.foreground }}",
@@ -4056,13 +4056,13 @@
       "settings": {
         "product": "vakn-sportklocka-med-vackarlarm",
         "image": "shopify://shop_images/sleepwell_armband_hero.png",
-        "eyebrow": "Tyst väckarlarm på armen",
-        "heading": "Vakna i tid.",
+        "eyebrow": "För dig som delar säng",
+        "heading": "Sov, läs och vakna.",
         "heading_accent": "Utan att väcka någon.",
-        "text": "<p>SleepWell vibrerar dig vaken – inget pip, ingen som vaknar bredvid dig. Räknar också steg, kalorier och sömn.</p>",
-        "button_label": "Köp nu",
-        "button_link": "",
-        "show_price": true,
+        "text": "<p>SleepWell gör saker för sovrummet som inte stör den bredvid dig: ett väckarlarm som vibrerar tyst på armen och en läslampa som bara lyser på boken.</p>",
+        "button_label": "Se produkterna",
+        "button_link": "shopify://collections/all",
+        "show_price": false,
         "button_note": "Köp 2 – spara 20 %",
         "trust_1": "Fri frakt",
         "trust_2": "30 dagars öppet köp",
@@ -4677,19 +4677,207 @@
         "padding-block-start": 56,
         "padding-block-end": 56
       }
+    },
+    "produkter": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_fifeh4": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h2>Våra produkter</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_eibbma": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "settings": {
+                "label": "Visa alla",
+                "open_in_new_tab": false,
+                "style_class": "button-unstyled",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_fifeh4",
+            "product_list_button_eibbma"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_PEPpfq": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 24,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_WNMpHe": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_yXfkPX": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_card_gallery_PEPpfq",
+            "product_title_WNMpHe",
+            "price_yXfkPX"
+          ]
+        }
+      },
+      "name": "Våra produkter",
+      "settings": {
+        "collection": "all",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 4,
+        "columns": 2,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "background_color": "#ffffff",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
     }
   },
   "order": [
     "intro",
     "hero",
+    "produkter",
+    "produkt",
+    "lampa",
     "trust",
     "fakta",
     "who",
     "jamfor",
-    "produkt",
-    "lampa",
-    "specs",
     "steg",
+    "specs",
     "faq",
     "cta"
   ]
