@@ -1634,7 +1634,8 @@
               "settings": {
                 "custom_liquid": "{% render 'vakn-bundle', product: closest.product %}"
               },
-              "blocks": {}
+              "blocks": {},
+              "disabled": true
             },
             "buy_buttons": {
               "type": "buy-buttons",
@@ -3984,7 +3985,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>Fri frakt · 30 dagars öppet köp · Köp 2 – spara 20 %</p>",
+            "text": "<p>Fri frakt · 30 dagars öppet köp</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -4071,7 +4072,7 @@
         "button_label": "Se produkterna",
         "button_link": "shopify://collections/all",
         "show_price": false,
-        "button_note": "Köp 2 – spara 20 %",
+        "button_note": "",
         "trust_1": "Fri frakt",
         "trust_2": "30 dagars öppet köp",
         "trust_3": "Säker betalning",
@@ -4291,7 +4292,8 @@
               "settings": {
                 "custom_liquid": "{% render 'vakn-bundle', product: closest.product %}"
               },
-              "blocks": {}
+              "blocks": {},
+              "disabled": true
             },
             "buy_buttons": {
               "type": "buy-buttons",
