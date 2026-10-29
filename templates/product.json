@@ -792,7 +792,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>329 kr · Fri frakt · 2 st spara 20 % · 3 st spara 30 %</p>",
+            "text": "<p>349 kr · Fri frakt · 2 st spara 20 % · 3 st spara 30 %</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -3927,7 +3927,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Mejla oss på <a href=\"mailto:aronleijon@icloud.com\">aronleijon@icloud.com</a> eller använd <a href=\"/pages/contact\">kontaktformuläret</a>. Ange gärna ordernummer om det gäller en beställning.</p>",
+                    "text": "<p>Använd <a href=\"/pages/contact\">kontaktformuläret</a>. Ange gärna ordernummer om det gäller en beställning.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
